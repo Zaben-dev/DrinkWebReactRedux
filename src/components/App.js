@@ -1,41 +1,28 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import AuthenticationPage from './AuthenticationPage';
-import '../styles/App.css';
-import SignOut from './SignOut';
-import{TOGGLE_LOGIN} from "../redux/actionTypes"
-import{connect} from 'react-redux'
+import Dashboard from './Dashboard';
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
 function App(props) {
-
-  useEffect(()=>{
-    if(window.localStorage.getItem('isLogged')==="true"){
-      props.toggleLogin();
-    }
-  },[])
-
-
   return (
     <div className="App">
-      {props.isLogged===true?
-      <SignOut/>:
-      <AuthenticationPage/>}
+      <Router>
+         <Switch>
+          <Route exact path = "/">
+           <Redirect to='/login'/>
+          </Route>
+         <Route path = "/dashboard">
+           <Dashboard/>
+         </Route>
+         <Route path = "/login">
+            <AuthenticationPage/>
+         </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  const { isLogged } = state.LogInReducer;
-  return {
-    isLogged
-  };
-}
-
-const mapDispatchToProps = dispatch=>{
-  return{
-    toggleLogin: ()=>dispatch({type: TOGGLE_LOGIN})
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
 
 
