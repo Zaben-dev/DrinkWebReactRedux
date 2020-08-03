@@ -1,0 +1,23 @@
+.button {
+  width:100%;
+  margin-top:11%;
+  padding: 4% 8% 4% 8%;
+  border: 0px;
+  background-color: #535353;
+  color:white;
+  border-radius: 18px;
+  overflow: hidden; 
+  font-size:17px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+  font-size:20px;
+  margin-top:65%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width:55%;
+  text-align: center;
+}
+

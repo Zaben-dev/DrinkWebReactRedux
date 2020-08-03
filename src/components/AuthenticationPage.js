@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import Authenticate from './Authenticate';
 import firebase from '../firebase';
 import {useHistory} from 'react-router-dom';
+import '../styles/loginPage.css';
+
 
 function AuthenticationPage(){
   let history = useHistory();
@@ -15,10 +17,11 @@ function AuthenticationPage(){
   },[])
 
   return(
-    <div>
-      <Authenticate provider={new firebase.auth.GoogleAuthProvider()} providerName="google"/>
-      <Authenticate provider={new firebase.auth.FacebookAuthProvider()} providerName="facebook"/>
-      <Authenticate provider={new firebase.auth.TwitterAuthProvider()} providerName="twitter"/>
+    <div className="container">
+      Sign In with:
+      <Authenticate provider={new firebase.auth.GoogleAuthProvider()} providerName="Google"/>
+      <Authenticate provider={new firebase.auth.FacebookAuthProvider()} providerName="Facebook"/>
+      <Authenticate provider={new firebase.auth.TwitterAuthProvider()} providerName="Twitter"/>
     </div>
   )
 }

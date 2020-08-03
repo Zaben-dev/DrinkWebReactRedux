@@ -1,9 +1,18 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rowdies&display=swap');
+body{
+background-image: linear-gradient(to bottom, rgb(180, 225, 255), rgb(45, 171, 255));
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+button {font-family: inherit}
+
+
 
