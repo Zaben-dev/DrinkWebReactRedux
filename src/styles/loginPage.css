@@ -1,6 +1,6 @@
 .button {
   width:100%;
-  margin-top:11%;
+  margin-top:3vh;
   padding: 4% 8% 4% 8%;
   border: 0px;
   background-color: #535353;
@@ -13,7 +13,7 @@
 
 .container{
   font-size:20px;
-  margin-top:65%;
+  margin-top:32vh;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -21,3 +21,31 @@
   text-align: center;
 }
 
+@media (min-width: 769px) {
+  .button {
+    width:100%;
+    margin-top:3vh;
+    padding: 3% 6% 3% 6%;
+    border: 0px;
+    background-color: #535353;
+    color:white;
+    border-radius: 18px;
+    overflow: hidden; 
+    font-size:17px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  .button:hover {
+    background-color: #3f3f3f;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .container{
+    font-size:20px;
+    margin-top:30vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:18%;
+    text-align: center;
+  }
+}
