@@ -3,7 +3,7 @@ import Authenticate from './Authenticate';
 import firebase from '../firebase';
 import {useHistory} from 'react-router-dom';
 import '../styles/loginPage.css';
-
+import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 function AuthenticationPage(){
   let history = useHistory();
@@ -19,9 +19,9 @@ function AuthenticationPage(){
   return(
     <div className="container">
       Sign In with:
-      <Authenticate provider={new firebase.auth.GoogleAuthProvider()} providerName="Google"/>
-      <Authenticate provider={new firebase.auth.FacebookAuthProvider()} providerName="Facebook"/>
-      <Authenticate provider={new firebase.auth.TwitterAuthProvider()} providerName="Twitter"/>
+      <Authenticate provider={new firebase.auth.GoogleAuthProvider()} providerName="Google" icon={<FaGoogle/>}/>
+      <Authenticate provider={new firebase.auth.FacebookAuthProvider()} providerName="Facebook" icon={<FaFacebook/>}/>
+      <Authenticate provider={new firebase.auth.TwitterAuthProvider()} providerName="Twitter"  icon={<FaTwitter />}/>
     </div>
   )
 }

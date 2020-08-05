@@ -17,7 +17,7 @@ function Authenticate(props){
   
   return(
     <div>
-      <button className="button" onClick={handleClick}>{props.providerName}</button>
+      <button className="button" onClick={handleClick}>{props.providerName}&nbsp;&nbsp;&nbsp;<span>{props.icon}</span></button>
     </div>
     )
 }
