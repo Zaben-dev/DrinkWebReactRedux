@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import 'firebase/auth';
 import {useHistory} from 'react-router-dom';
+import styles from '../styles/topBar.module.css';
 
 function SignOut(props){
   let history = useHistory();
@@ -15,7 +16,7 @@ function SignOut(props){
     
   return(
     <div>
-      <button onClick={handleClick}>sign out</button>
+      <button className={styles.button} onClick={handleClick}>sign out</button>
     </div>
     )
 }
