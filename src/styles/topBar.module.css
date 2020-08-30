@@ -1,69 +1,117 @@
 @media (max-width: 768px) {
   .topBar{
+    overflow: hidden;
+    height: 40px;
     background-color:rgba(37, 183, 209, 0.2);
-    height: 4vh;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 10vw auto 10vw 30vw 2vw 30vw;
     position: fixed;
-    top: 0;
     width: 100%;
+    align-items: center;
+    justify-items: center;
   }
 
-  .button{
-    padding: 2% 4% 2% 4%;
-    border: 2px;
-    background-color: #5e5e5e;
-    color:white;
-    border-radius: 10px;
-    font:10px;
-    width:20vw;
-    margin-left:10px;
-    margin-right:10px;
+  .homePageIconContainer{
+    grid-column: 1;
+  }
+
+  .homePageIcon{
+    background-color: Transparent;
+    border: none;
+    font-size:25px;
+    color:rgba(70, 133, 192, 0.979);
+    text-align: center;
   }
 
   .profileImage{
     border-radius: 50%;
-    vertical-align: middle;
-    width: 3vh;
-    height: 3vh;
-    margin-right: 10px;
+    grid-column: 3;
+    height:83%;
   }
+
+  .displayName{
+    grid-column:4;
+    font-size:4vw;
+  }
+
+  .buttonContainer{
+    grid-column:6;
+    width:100%;
+  }
+
+  .button{
+    padding: 2% 2% 2% 2%;
+    border: 2px;
+    background-color: rgba(70, 133, 192, 0.979);
+    color:white;
+    width:78%;
+    border-radius: 10px;
+    font:10px;
+    margin:auto;
+    display:block;
+  }
+
+  .button:hover{
+    background-color: rgba(55, 114, 170, 0.979);
+  }
+
 }
 
 @media (min-width: 769px) {
   .topBar{
+    overflow: hidden;
+    height: 40px;
     background-color:rgba(37, 183, 209, 0.2);
-    height: 4vh;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 4vw auto 3vw 10vw 2vw 11vw;
     position: fixed;
-    top: 0;
     width: 100%;
+    align-items: center;
+    justify-items: center;
   }
 
-  .button{
-    padding: 2% 4% 2% 4%;
-    border: 2px;
-    background-color: #5e5e5e;
-    color:white;
-    border-radius: 10px;
-    font:10px;
-    width:5vw;
-    margin-left:10px;
-    margin-right:10px;
+  .homePageIconContainer{
+    grid-column: 1;
   }
 
-  .button:hover {
-    background-color: #504f4f;
+  .homePageIcon{
+    background-color: Transparent;
+    border: none;
+    font-size:25px;
+    color:rgba(70, 133, 192, 0.979);
+    text-align: center;
   }
 
   .profileImage{
     border-radius: 50%;
-    vertical-align: middle;
-    width: 3vh;
-    height: 3vh;
-    margin-right: 10px;
+    grid-column: 3;
+    height:83%;
   }
+
+  .displayName{
+    grid-column:4;
+    font-size:1.1vw;
+  }
+
+  .buttonContainer{
+    grid-column:6;
+    width:100%;
+  }
+
+  .button{
+    padding: 2% 2% 2% 2%;
+    border: 2px;
+    background-color: rgba(70, 133, 192, 0.979);
+    color:white;
+    width:78%;
+    border-radius: 10px;
+    font:10px;
+    margin:auto;
+    display:block;
+  }
+
+  .button:hover{
+    background-color: rgba(55, 114, 170, 0.979);
+  }
+
 }

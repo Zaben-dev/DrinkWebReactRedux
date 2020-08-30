@@ -1,5 +1,6 @@
 import React from 'react';
 import SignOut from './SignOut';
+import HomePageIcon from './HomePageIcon';
 import styles from '../styles/topBar.module.css';
 import {connect} from 'react-redux';
 
@@ -7,9 +8,10 @@ function TopBar(props){
 
   return(
     <div className={styles.topBar}>
-      <SignOut/>
-      {props.userInfo ? props.userInfo.displayName : null}
+      <div className={styles.homePageIconContainer}><HomePageIcon/></div>
       <img className={styles.profileImage} src={props.userInfo.photoURL}/>
+      <div className={styles.displayName}> {props.userInfo ? props.userInfo.displayName : null}</div>
+      <div className={styles.buttonContainer}><SignOut/></div>
     </div>
   )
 }

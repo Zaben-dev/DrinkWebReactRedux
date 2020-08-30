@@ -5,6 +5,7 @@ import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
 
 function Dashboard(props){
+  
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged(function(user) {
       if (user) {

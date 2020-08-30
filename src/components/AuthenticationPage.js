@@ -7,6 +7,7 @@ import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 function AuthenticationPage(){
   let history = useHistory();
+  
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
