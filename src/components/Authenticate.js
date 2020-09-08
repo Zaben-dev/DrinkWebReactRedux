@@ -21,5 +21,4 @@ function Authenticate(props){
     )
 }
 
-
 export default Authenticate

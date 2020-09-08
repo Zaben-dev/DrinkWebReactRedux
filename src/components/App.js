@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom
 function App(props) {
   
   return (
-    <div>
+    <>
       <Router>
          <Switch>
           <Route exact path = "/">
@@ -20,7 +20,7 @@ function App(props) {
          </Route>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
 

@@ -1,6 +1,8 @@
 import{combineReducers} from "redux";
-import userInfoReducer from "./userInfoReducer";
+import randomDrinksInBoard from "./randomDrinksInBoard";
+import userInfo from './userInfo';
 
 export default combineReducers({
- userInfoReducer
+ randomDrinksInBoard,
+ userInfo
 })

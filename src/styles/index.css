@@ -12,6 +12,10 @@ background-image: linear-gradient(to bottom, rgb(180, 225, 255), rgb(45, 171, 25
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, #root, .App {
+  height: 100%;
+}
+
 button {font-family: inherit}
 
 

@@ -3,6 +3,7 @@ import TopBar from './TopBar';
 import {connect} from 'react-redux';
 import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
+import RandomDrinksBoard from './RandomDrinksBoard'
 
 function Dashboard(props){
   
@@ -16,9 +17,13 @@ function Dashboard(props){
   },[])
 
   return(
-    <TopBar/>
+    <>
+      <TopBar/>
+      <RandomDrinksBoard/>
+    </>
   )
 }
+
 const mapDispatchToProps = dispatch =>{
   return{
     setUserInfo: userInfo => dispatch(setUserInfo(userInfo))

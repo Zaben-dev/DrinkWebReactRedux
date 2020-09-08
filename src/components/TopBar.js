@@ -18,7 +18,7 @@ function TopBar(props){
 
 const mapStateToProps = state => {
   return{
-    userInfo: state.userInfoReducer.userInfo
+    userInfo: state.userInfo.userInfo
   };
 }
 

@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  .board{
+    margin-top:65px;
+    margin-left:auto;
+    margin-right:auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:50% 50%;
+    grid-row-gap:11%;
+    width:95%;
+    align-items: start;
+  }
+
+  .drink{
+    text-align: center;
+    font-size:2.95vw;
+    transition: transform .2s;
+  }
+
+  .image{
+    border-radius: 50%;
+    width:40%;
+    height:40%;
+    border: 5px solid rgb(142, 189, 199);
+    margin:auto;
+    display: block;
+  }
+
+  .drink:hover{
+    transform: scale(1.04);
+  }
+}
+@media (min-width: 769px) {
+  .board{
+    margin-top:65px;
+    margin-left:auto;
+    margin-right:auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width:70%;
+    align-items: start;
+    justify-items:start;
+  }
+
+  .drink{
+    text-align: center;
+    font-size:15px;
+    transition: transform .2s;
+  }
+
+  .image{
+    border-radius: 50%;
+    width:45%;
+    height:45%;
+    border: 5px solid rgb(142, 189, 199);
+    margin:auto;
+    display: block;
+    justify-self:Start;
+  }
+
+  .drink:hover{
+    transform: scale(1.04);
+  }
+}
+
