@@ -15,6 +15,7 @@
     text-align: center;
     font-size:2.95vw;
     transition: transform .2s;
+    border-radius: 20px;
   }
 
   .image{
@@ -28,7 +29,13 @@
 
   .drink:hover{
     transform: scale(1.04);
+    background-color:  rgba(72, 121, 255, 0.06);
   }
+
+  a{ 
+    color: inherit;
+    text-decoration: none;
+   } 
 }
 @media (min-width: 769px) {
   .board{
@@ -46,13 +53,14 @@
     text-align: center;
     font-size:15px;
     transition: transform .2s;
+    border-radius: 20px;
   }
 
   .image{
     border-radius: 50%;
     width:45%;
     height:45%;
-    border: 5px solid rgb(142, 189, 199);
+    border: 5px solid rgb(101, 134, 184);
     margin:auto;
     display: block;
     justify-self:Start;
@@ -60,6 +68,12 @@
 
   .drink:hover{
     transform: scale(1.04);
+    background-color:  rgba(72, 121, 255, 0.06);
   }
+
+  a{ 
+    color: inherit;
+    text-decoration: none;
+   } 
 }
 
