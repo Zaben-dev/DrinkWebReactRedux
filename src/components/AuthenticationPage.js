@@ -15,7 +15,7 @@ function AuthenticationPage(){
       }
     });
     return () => unsubscribe();
-  },[])
+  },[history])
 
   return(
     <div className={styles.container}>

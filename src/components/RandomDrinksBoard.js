@@ -1,44 +1,35 @@
-import React, {useEffect} from 'react';
-import {connect} from 'react-redux';
+import React, {useEffect, useCallback} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {addDrinkToBoard} from '../redux/actions'
 import DrinkMiniature from './DrinkMiniature'
 import styles from '../styles/randomDrinksBoard.module.css';
 
 
-function RandomDrinksBoard(props){
-  async function fetchDrink(){
-    if(props.drinksInBoard.length<4){
+function RandomDrinksBoard(){
+  const dispatch = useDispatch();
+  const drinksInBoard = useSelector(state => state.randomDrinksInBoard);
+
+  const fetchDrink = useCallback( async () => {
+    if(drinksInBoard.length<4){
       let data = await fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php');
       let drink = await data.json();
-      props.addDrinkToBoard(drink.drinks[0]);
+      dispatch(addDrinkToBoard(drink.drinks[0]));
     }
-  }
+  },[drinksInBoard, dispatch])
   
   useEffect(()=>{
     fetchDrink();
-  },[props.drinksInBoard])
+  },[drinksInBoard, fetchDrink])
 
   return (
     <>
-      {props.drinksInBoard.length===4 && <div className={styles.board}>
-        <DrinkMiniature drink={props.drinksInBoard[0]}/>
-        <DrinkMiniature drink={props.drinksInBoard[1]}/>
-        <DrinkMiniature drink={props.drinksInBoard[2]}/>
-        <DrinkMiniature drink={props.drinksInBoard[3]}/>
+      {drinksInBoard.length===4 && <div className={styles.board}>
+        <DrinkMiniature drink={drinksInBoard[0]}/>
+        <DrinkMiniature drink={drinksInBoard[1]}/>
+        <DrinkMiniature drink={drinksInBoard[2]}/>
+        <DrinkMiniature drink={drinksInBoard[3]}/>
       </div>}
     </>);
 }
 
-const mapStateToProps = state=> {
-  return{
-    drinksInBoard: state.randomDrinksInBoard
-  };
-}
-
-const mapDispatchToProps = dispatch =>{
-  return{
-    addDrinkToBoard: drink => dispatch(addDrinkToBoard(drink))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(RandomDrinksBoard)
+export default RandomDrinksBoard;

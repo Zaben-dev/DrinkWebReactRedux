@@ -2,24 +2,19 @@ import React from 'react';
 import SignOut from './SignOut';
 import HomePageIcon from './HomePageIcon';
 import styles from '../styles/topBar.module.css';
-import {connect} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function TopBar(props){
+  const userInfo = useSelector(state => state.userInfo.userInfo);
 
   return(
     <div className={styles.topBar}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
-      <img className={styles.profileImage} src={props.userInfo.photoURL}/>
-      <div className={styles.displayName}> {props.userInfo ? props.userInfo.displayName : null}</div>
+      <img className={styles.profileImage} src={userInfo.photoURL}/>
+      <div className={styles.displayName}> {userInfo && userInfo.displayName}</div>
       <div className={styles.buttonContainer}><SignOut/></div>
     </div>
   )
 }
 
-const mapStateToProps = state => {
-  return{
-    userInfo: state.userInfo.userInfo
-  };
-}
-
-export default connect(mapStateToProps, null)(TopBar)
+export default TopBar;
