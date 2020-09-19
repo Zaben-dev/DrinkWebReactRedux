@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthenticationPage from './AuthenticationPage';
 import Dashboard from './Dashboard';
+import DrinkPage from './DrinkPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
 function App(props) {
@@ -17,6 +18,9 @@ function App(props) {
          </Route>
          <Route path = "/login">
             <AuthenticationPage/>
+         </Route>
+         <Route path = "/drink/:id">
+           <DrinkPage/>
          </Route>
         </Switch>
       </Router>

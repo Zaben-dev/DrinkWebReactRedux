@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {addDrinkToBoard} from '../redux/actions'
 import DrinkMiniature from './DrinkMiniature'
 import styles from '../styles/randomDrinksBoard.module.css';
-import {Link} from 'react-router-dom'
+
 
 function RandomDrinksBoard(props){
   async function fetchDrink(){
@@ -16,12 +16,12 @@ function RandomDrinksBoard(props){
   
   useEffect(()=>{
     fetchDrink();
-  },[props.drinksInBoard.length])
+  },[props.drinksInBoard])
 
   return (
     <>
       {props.drinksInBoard.length===4 && <div className={styles.board}>
-        <Link to={`/drink/${props.drinksInBoard[0].idDrink}`}><DrinkMiniature drink={props.drinksInBoard[0]}/></Link> 
+        <DrinkMiniature drink={props.drinksInBoard[0]}/>
         <DrinkMiniature drink={props.drinksInBoard[1]}/>
         <DrinkMiniature drink={props.drinksInBoard[2]}/>
         <DrinkMiniature drink={props.drinksInBoard[3]}/>

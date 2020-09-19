@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rowdies&display=swap');
 body{
-background-image: linear-gradient(to bottom, rgb(180, 225, 255), rgb(45, 171, 255));
+  background-image: linear-gradient(to bottom, rgb(180, 225, 255), rgb(45, 171, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   flex-grow: 1;

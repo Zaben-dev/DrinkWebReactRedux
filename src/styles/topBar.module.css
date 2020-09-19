@@ -21,6 +21,7 @@
     font-size:25px;
     color:rgba(70, 133, 192, 0.979);
     text-align: center;
+    cursor:pointer;
   }
 
   .profileImage{
@@ -81,6 +82,7 @@
     font-size:25px;
     color:rgba(70, 133, 192, 0.979);
     text-align: center;
+    cursor:pointer;
   }
 
   .profileImage{

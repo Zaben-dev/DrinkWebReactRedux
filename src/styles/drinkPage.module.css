@@ -1,0 +1,126 @@
+@media (max-width: 768px) {
+  .container{
+    display: grid;
+    margin-top:55px;
+    grid-template-areas: 
+      "drinkName"
+      "glass"
+      "image" 
+      "ingredients"
+      "description";
+  }
+
+  .imageContainer{
+    grid-area:image;
+    padding-top:3%;
+  }
+
+  .image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    border-radius: 2%;
+    border: 5px solid rgb(142, 189, 199);
+  }
+
+  .drinkName{
+    grid-area: drinkName;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .glass{
+    grid-area: glass;
+    color:rgb(109, 109, 109);
+    text-align: center;
+  }
+
+  .ingredients{
+    padding-top:4%;
+    grid-area: ingredients;
+    line-height: 110%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .list{
+    list-style-type: square;
+    display: list-item;
+  }
+
+  .description{
+    grid-area: description;
+    font-size:15px;
+    margin-left:5%;
+    margin-right:5%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .container{
+    display: grid;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:55px;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 0.4fr 4fr 3fr;
+    grid-template-areas: 
+      "image drinkName" 
+      "image glass"
+      "image ingredients"
+      "description description";
+  }
+
+  .imageContainer{
+    grid-area:image;
+  }
+
+  .image{
+    display:block;
+    width:55%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 2%;
+    border: 5px solid rgb(142, 189, 199);
+  }
+
+  .drinkName{
+    grid-area: drinkName;
+    display: flex;
+    align-items: center;
+    font-size:2vw;
+    font-weight: bold;
+    overflow:hidden;
+  }
+
+  .glass{
+    grid-area: glass;
+    color:rgb(109, 109, 109)
+  }
+
+  .ingredients{
+    grid-area: ingredients;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+  }
+
+  .listElementOfIngredients{
+    list-style-type: square;
+    display: list-item;
+  }
+
+  .description{
+    grid-area: description;
+    font-size:17px;
+    margin-left:12%;
+    margin-right:22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
