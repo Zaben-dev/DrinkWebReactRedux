@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useEffect}   from 'react';
 import AuthenticationPage from './AuthenticationPage';
 import Dashboard from './Dashboard';
 import DrinkPage from './DrinkPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import {setUserInfo} from '../redux/actions'
+import firebase from '../firebase';
+import {useDispatch} from 'react-redux';
 
 function App(props) {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        dispatch(setUserInfo(user));
+      }
+    });
+    return () => unsubscribe();
+  },[dispatch])
   
   return (
     <>
