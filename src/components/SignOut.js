@@ -4,7 +4,7 @@ import 'firebase/auth';
 import {useHistory} from 'react-router-dom';
 import styles from '../styles/topBar.module.css';
 
-function SignOut(props){
+function SignOut(){
   let history = useHistory();
   function handleClick(){
     firebase.auth().signOut().then(function() {
