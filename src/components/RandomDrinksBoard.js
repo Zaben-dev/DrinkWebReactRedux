@@ -1,8 +1,10 @@
 import React, {useEffect, useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {addDrinkToBoard} from '../redux/actions'
-import DrinkMiniature from './DrinkMiniature'
+import {addDrinkToBoard} from '../redux/actions';
+import DrinkMiniature from './DrinkMiniature';
+import RefreshRandomDrinks from './RefreshRandomDrinks';
 import styles from '../styles/randomDrinksBoard.module.css';
+
 
 
 function RandomDrinksBoard(){
@@ -22,14 +24,18 @@ function RandomDrinksBoard(){
   },[drinksInBoard, fetchDrink])
 
   return (
-    <>
-      {drinksInBoard.length===4 && <div className={styles.board}>
-        <DrinkMiniature drink={drinksInBoard[0]}/>
-        <DrinkMiniature drink={drinksInBoard[1]}/>
-        <DrinkMiniature drink={drinksInBoard[2]}/>
-        <DrinkMiniature drink={drinksInBoard[3]}/>
-      </div>}
-    </>);
+      <div className={styles.board}>
+        <RefreshRandomDrinks/>
+        {drinksInBoard.length===4 && 
+        <>
+          <div></div>
+          <DrinkMiniature drink={drinksInBoard[0]}/>
+          <DrinkMiniature drink={drinksInBoard[1]}/>
+          <DrinkMiniature drink={drinksInBoard[2]}/>
+          <DrinkMiniature drink={drinksInBoard[3]}/>
+        </>}
+      </div>)
 }
+
 
 export default RandomDrinksBoard;

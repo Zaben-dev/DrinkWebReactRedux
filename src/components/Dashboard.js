@@ -1,6 +1,6 @@
 import React from 'react';
 import TopBar from './TopBar';
-import RandomDrinksBoard from './RandomDrinksBoard'
+import RandomDrinksBoard from './RandomDrinksBoard';
 
 function Dashboard(){
 

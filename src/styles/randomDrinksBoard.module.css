@@ -1,69 +1,79 @@
 @media (max-width: 768px) {
   .board{
-    margin-top:65px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows:50% 50%;
-    grid-row-gap:11%;
-    width:95%;
+    grid-template-rows: 10% 45% 45%;
+    grid-row-gap: 9%;
     align-items: start;
   }
 
   .drink{
     text-align: center;
-    font-size:2.95vw;
-    transition: transform .2s;
+    font-size: 3.2vw;
     border-radius: 20px;
+    animation: fadein 2s;
   }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
   .image{
     border-radius: 50%;
-    width:40%;
-    height:40%;
+    width: 52%;
+    height: 52%;
     border: 5px solid rgb(142, 189, 199);
-    margin:auto;
+    margin: auto;
     display: block;
-  }
-
-  .drink:hover{
-    transform: scale(1.04);
-    background-color:  rgba(72, 121, 255, 0.06);
   }
 
   a{ 
     color: inherit;
     text-decoration: none;
    } 
+
+   .button{
+    grid-column: 1 / 2;
+    margin-left: 38%;
+    background-color: Transparent;
+    color: rgb(80, 118, 175);
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 28px;
+    transition-duration: 0.4s;
+   }
+
+   .button:hover {
+     transform: scale(1.3);
+     color: rgb(64, 109, 177);
+   }
 }
+
 @media (min-width: 769px) {
   .board{
-    margin-top:65px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    width:70%;
+    grid-template-columns: 4% 4% 23% 23% 23% 23%;
+    width: 70%;
     align-items: start;
-    justify-items:start;
+    justify-items: start;
   }
 
   .drink{
     text-align: center;
-    font-size:15px;
+    font-size: 15px;
     transition: transform .2s;
     border-radius: 20px;
-  }
-
-  .image{
-    border-radius: 50%;
-    width:45%;
-    height:45%;
-    border: 5px solid rgb(101, 134, 184);
-    margin:auto;
-    display: block;
-    justify-self:Start;
+    animation: fadein 2s;
   }
 
   .drink:hover{
@@ -71,9 +81,42 @@
     background-color:  rgba(72, 121, 255, 0.06);
   }
 
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .image{
+    border-radius: 50%;
+    width: 45%;
+    height: 45%;
+    border: 5px solid rgb(101, 134, 184);
+    margin: auto;
+    display: block;
+    justify-self: Start;
+  }
+
   a{ 
     color: inherit;
     text-decoration: none;
    } 
+
+   .button{
+    background-color: Transparent;
+    color: rgb(80, 118, 175);
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 34px;
+    margin-top: 100%;
+    transition-duration: 0.4s;
+   }
+
+   .button:hover {
+     transform: scale(1.3);
+     color: rgb(64, 109, 177);
+   }
 }
 
