@@ -18,6 +18,7 @@
   .homePageIcon{
     background-color: Transparent;
     border: none;
+    outline:none;
     font-size:25px;
     color:rgba(70, 133, 192, 0.979);
     text-align: center;

@@ -5,8 +5,6 @@ import DrinkMiniature from './DrinkMiniature';
 import RefreshRandomDrinks from './RefreshRandomDrinks';
 import styles from '../styles/randomDrinksBoard.module.css';
 
-
-
 function RandomDrinksBoard(){
   const dispatch = useDispatch();
   const drinksInBoard = useSelector(state => state.randomDrinksInBoard);

@@ -2,12 +2,13 @@ import React, {useEffect}  from 'react';
 import AuthenticationPage from './AuthenticationPage';
 import Dashboard from './Dashboard';
 import DrinkPage from './DrinkPage';
+import SearchPage from './SearchPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
 import {useDispatch} from 'react-redux';
 
-function App(props) {
+function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -34,6 +35,9 @@ function App(props) {
          </Route>
          <Route path = "/drink/:id">
            <DrinkPage/>
+         </Route>
+         <Route path = "/search/:string">
+           <SearchPage/>
          </Route>
         </Switch>
       </Router>
