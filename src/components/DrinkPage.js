@@ -27,7 +27,7 @@ function DrinkPage(){
         null
       ) : (
         <div className={styles.container}>
-          <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb}/></div>
+          <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb} alt="drink"/></div>
           <div className={styles.drinkName}>{drink.strDrink}</div>
           <div className={styles.glass}>glass: {drink.strGlass}</div>
           <div><DrinkIngredients drink={drink}/></div>

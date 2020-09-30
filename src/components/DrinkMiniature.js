@@ -6,7 +6,7 @@ function DrinkMiniature(props){
   return(
     <Link to={`/drink/${props.drink.idDrink}`}>
       <div className={styles.drink}>
-        <img className={styles.image}  src={props.drink.strDrinkThumb}/> <br/> 
+        <img className={styles.image}  src={props.drink.strDrinkThumb} alt="drink thumbnail"/> <br/> 
         {props.drink.strDrink}
       </div>
     </Link>
