@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  .drink{
+    text-align: center;
+    font-size: 3.6vw;
+    border-radius: 20px;
+    animation: fadein 2s;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .image{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    border: 5px solid rgb(142, 189, 199);
+    margin: auto;
+    display: block;
+  }
+
+  a{ 
+    color: inherit;
+    text-decoration: none;
+   } 
+}
+
+@media (min-width: 769px) {
+  .drink{
+    text-align: center;
+    font-size: 15px;
+    transition: transform .2s;
+    border-radius: 20px;
+    animation: fadein 2s;
+  }
+
+  .drink:hover{
+    transform: scale(1.04);
+    background-color:  rgba(72, 121, 255, 0.06);
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .image{
+    border-radius: 50%;
+    width: 45%;
+    height: 45%;
+    border: 5px solid rgb(101, 134, 184);
+    margin: auto;
+    display: block;
+    justify-self: Start;
+  }
+
+  a{ 
+    color: inherit;
+    text-decoration: none;
+   } 
+
+   .button:hover {
+     transform: scale(1.3);
+     color: rgb(64, 109, 177);
+   }
+}

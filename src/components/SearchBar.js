@@ -3,7 +3,6 @@ import {useHistory} from 'react-router-dom';
 import styles from '../styles/searchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 
-
 function SearchBar(){
   const [input, setInput] = useState('');
   let history = useHistory();

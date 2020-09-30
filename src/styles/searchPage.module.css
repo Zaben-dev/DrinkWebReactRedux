@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+  .selectFilter select{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    border: 1px solid rgb(142, 189, 199);
+    width: 40%;
+    font-size: inherit;
+    padding: 10px 35px 10px 17px;
+    cursor: pointer;
+    outline: none;
+    background: url(../images/arrow.png) no-repeat right rgb(138, 198, 209);
+    -webkit-appearance: none;
+  }
+
+  select:focus{
+    outline: none;
+  }
+
+  .drinksContainer{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    grid-row-gap: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 769px) {
+  .selectFilter select{
+    display: block;
+    margin-top: 55px;
+    margin-left: 60%;
+    margin-right: 40%;
+    border: 1px solid rgb(142, 189, 199);
+    font-size: inherit;
+    padding: 4px 34px 4px 17px;
+    cursor: pointer;
+    outline: none;
+    background: url(../images/arrow.png) no-repeat right rgb(138, 198, 209);
+    -webkit-appearance: none;
+  }
+
+  select:focus{
+    outline: none;
+  }
+
+  .drinksContainer{
+    margin-left:auto;
+    margin-right:auto;
+    width: 72%;
+    margin-top: 60px;
+    grid-row-gap: 80px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+

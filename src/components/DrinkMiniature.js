@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/randomDrinksBoard.module.css';
+import styles from '../styles/drinkMiniature.module.css';
 import {Link} from 'react-router-dom'
 
 
