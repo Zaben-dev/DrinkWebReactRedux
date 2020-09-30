@@ -1,42 +1,41 @@
-import React, {useEffect, useCallback}  from 'react';
+import React, {useEffect, useCallback, useState}  from 'react';
 import {useParams} from "react-router-dom";
 import TopBar from './TopBar';
 import DrinkIngredients from './DrinkIngredients';
-import {useDispatch, useSelector} from 'react-redux';
-import {addDrinkToDisplay, clearActuallyDisplayingDrink} from '../redux/actions';
 import styles from '../styles/drinkPage.module.css'
 
 function DrinkPage(){
   let {id} = useParams();
-  const dispatch = useDispatch();
-  const drinkToDisplay = useSelector(state => state.drinkToDisplay.drink);
+  const [drink, setDrink] = useState(null);
 
   const fetchDrink = useCallback( async () => {
     let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
     let drink = await data.json();
-    dispatch(addDrinkToDisplay(drink.drinks[0]));
-  },[dispatch, id])
+    setDrink(drink.drinks[0]);
+  },[id])
 
   useEffect(()=>{
     fetchDrink();
     return () => {
-      dispatch(clearActuallyDisplayingDrink());
     }
-  },[dispatch, fetchDrink])
+  },[fetchDrink])
   
   return(
     <>
       <TopBar/>
-      <div className={styles.container}>
-        <div className={styles.imageContainer}> <img className={styles.image} src={drinkToDisplay.strDrinkThumb}/></div>
-        <div className={styles.drinkName}>{drinkToDisplay.strDrink}</div>
-        <div className={styles.glass}>glass: {drinkToDisplay.strGlass}</div>
-        <div><DrinkIngredients drink={drinkToDisplay}/></div>
-        <div className={styles.description}>{drinkToDisplay.strInstructions}</div>
-      </div>
+      {drink === null ? (
+        null
+      ) : (
+        <div className={styles.container}>
+          <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb}/></div>
+          <div className={styles.drinkName}>{drink.strDrink}</div>
+          <div className={styles.glass}>glass: {drink.strGlass}</div>
+          <div><DrinkIngredients drink={drink}/></div>
+          <div className={styles.description}>{drink.strInstructions}</div>
+        </div>)
+      }
     </>
   )
 }
-
 
 export default DrinkPage;

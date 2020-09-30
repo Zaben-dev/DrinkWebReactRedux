@@ -1,4 +1,4 @@
-import {ADD_SEARCH_RESULTS, SET_USER_INFO, ADD_DRINK_TO_DISPLAY, ADD_DRINK_TO_BOARD, CLEAR_ACTUALLY_DIPLAYING_DRINK, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER} from "./actionTypes";
+import {ADD_SEARCH_RESULTS, SET_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER} from "./actionTypes";
 
 export function setUserInfo(userInfo){
   return{
@@ -17,19 +17,6 @@ export function addDrinkToBoard(drink){
 export function refreshDrinksInBoard(drink){
   return{
     type: REFRESH_DRINKS_IN_BOARD,
-  }
-}
-
-export function addDrinkToDisplay(drink){
-  return{
-    type: ADD_DRINK_TO_DISPLAY,
-    drink
-  }
-}
-
-export function clearActuallyDisplayingDrink(){
-  return{
-    type: CLEAR_ACTUALLY_DIPLAYING_DRINK
   }
 }
 
