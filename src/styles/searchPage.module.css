@@ -26,6 +26,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
   }
+
+  .noResults{
+    text-align: center;
+    margin-top:250px;
+    font-size:20px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -55,6 +61,12 @@
     grid-row-gap: 80px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .noResults{
+    text-align: center;
+    margin-top:200px;
+    font-size:26px;
   }
 }
 

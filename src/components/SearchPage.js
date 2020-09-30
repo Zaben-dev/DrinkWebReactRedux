@@ -6,6 +6,7 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
 import {addSearchResults, VisibilityFilters} from '../redux/actions';
 import styles from '../styles/searchPage.module.css';
+import { FaSearch } from 'react-icons/fa';
 
 function SearchPage(){
   let {string} = useParams();
@@ -25,7 +26,14 @@ function SearchPage(){
 
 
   if (results === null){
-    return <div>NOTHING FOUND</div>;
+    return(
+      <>
+        <TopBar/>
+        <div className={styles.noResults}> 
+          <FaSearch/> Sorry, no results were found...
+        </div>
+      </>
+    )
   }
   else if (Object.keys(results).length === 0){
     return null;
@@ -66,7 +74,6 @@ function SearchPage(){
         throw new Error('Unknown filter: ' + filter)
     }
   }
-
 }
 
 export default SearchPage;
