@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import Authenticate from './Authenticate';
 import firebase from '../firebase';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 import styles from '../styles/loginPage.module.css';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 
@@ -23,6 +23,12 @@ function AuthenticationPage(){
       <Authenticate provider={new firebase.auth.GoogleAuthProvider()} providerName="Google" icon={<FaGoogle/>}/>
       <Authenticate provider={new firebase.auth.FacebookAuthProvider()} providerName="Facebook" icon={<FaFacebook/>}/>
       <Authenticate provider={new firebase.auth.TwitterAuthProvider()} providerName="Twitter"  icon={<FaTwitter />}/>
+      <br/> 
+      <div className={styles.or}>
+         or
+      </div>
+      <br/>
+      <Link className={styles.link} to="/dashboard">enter without signing in</Link>
     </div>
   )
 }

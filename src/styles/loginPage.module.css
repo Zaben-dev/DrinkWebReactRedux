@@ -22,8 +22,17 @@
     text-align: center;
   }
 
-  span{
-    font-size:14px
+  .or{
+    font-size:15px;
+  }
+
+  .link{
+    font-size:16px;
+    color: rgb(44, 108, 122);
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -55,7 +64,16 @@
     text-align: center;
   }
 
-  span{
-    font-size:14px
+  .or{
+    font-size:15px;
+  }
+
+  .link{
+    font-size:16px;
+    color: rgb(44, 108, 122);
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
