@@ -3,9 +3,10 @@
     margin-top:34px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 44% 44%;
-    grid-row-gap: 6%;
+    grid-row-gap: 3vh;
     align-items: start;
+    min-height: 101vw;
+    overflow:hidden;
   }
   
   .button{
@@ -46,5 +47,9 @@
     font-size: 34px;
     margin-top: 100%;
     transition-duration: 0.4s;
+   }
+
+   .button:hover{
+    transform: scale( 1.25);
    }
 }
