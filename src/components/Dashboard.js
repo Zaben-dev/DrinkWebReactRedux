@@ -2,6 +2,7 @@ import React from 'react';
 import TopBar from './TopBar';
 import RandomDrinksBoard from './RandomDrinksBoard';
 import SearchBar from './SearchBar';
+import ChooseCharacterToBrowseBy from './ChooseCharacterToBrowseBy';
 
 function Dashboard(){
 
@@ -10,6 +11,7 @@ function Dashboard(){
       <TopBar/>
       <SearchBar/>
       <RandomDrinksBoard/>
+      <ChooseCharacterToBrowseBy/>
     </>
   )
 }

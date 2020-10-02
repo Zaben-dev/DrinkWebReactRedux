@@ -22,7 +22,7 @@
 
   a{ 
     color: inherit;
-    text-decoration: none;
+    text-decoration: none !important;
    } 
 }
 
@@ -33,6 +33,8 @@
     transition: transform .2s;
     border-radius: 20px;
     animation: fadein 2s;
+    color: inherit;
+    text-decoration: none !important;
   }
 
   .drink:hover{
@@ -57,11 +59,6 @@
 
   a{ 
     color: inherit;
-    text-decoration: none;
+    text-decoration: none !important;
    } 
-
-   .button:hover {
-     transform: scale(1.3);
-     color: rgb(64, 109, 177);
-   }
 }

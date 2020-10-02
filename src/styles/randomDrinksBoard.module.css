@@ -24,7 +24,7 @@
 
 @media (min-width: 769px) {
   .board{
-    margin-top: 65px;
+    margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -32,6 +32,7 @@
     width: 70%;
     align-items: start;
     justify-items: start;
+    height:250px;
   }
 
   .button{

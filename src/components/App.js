@@ -3,6 +3,7 @@ import AuthenticationPage from './AuthenticationPage';
 import Dashboard from './Dashboard';
 import DrinkPage from './DrinkPage';
 import SearchPage from './SearchPage';
+import BrowseByFirstCharacterPage from './BrowseByFirstCharacterPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
@@ -38,6 +39,9 @@ function App() {
          </Route>
          <Route path = "/search/:string">
            <SearchPage/>
+         </Route>
+         <Route path = "/browse/:character">
+           <BrowseByFirstCharacterPage/>
          </Route>
         </Switch>
       </Router>
