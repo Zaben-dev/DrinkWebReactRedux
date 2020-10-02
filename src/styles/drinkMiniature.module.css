@@ -40,6 +40,7 @@
   .drink:hover{
     transform: scale(1.04);
     background-color:  rgba(72, 121, 255, 0.06);
+    overflow: hidden;
   }
 
   @keyframes fadein {

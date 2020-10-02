@@ -9,6 +9,7 @@
     width: 100%;
     align-items: center;
     justify-items: center;
+    z-index: 1;
   }
 
   .homePageIconContainer{
@@ -76,6 +77,7 @@
     width: 100%;
     align-items: center;
     justify-items: center;
+    z-index: 1;
   }
 
   .homePageIconContainer{
@@ -129,5 +131,4 @@
   .button:hover{
     background-color: rgba(55, 114, 170, 0.979);
   }
-
 }

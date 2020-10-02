@@ -8,6 +8,8 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom
 import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
 import {useDispatch} from 'react-redux';
+import Footer from './Footer';
+import '../styles/index.css'
 
 function App() {
   const dispatch = useDispatch()
@@ -45,6 +47,8 @@ function App() {
          </Route>
         </Switch>
       </Router>
+      <br/><br/><br/><br/>
+      <Footer/>
     </>
   );
 }
