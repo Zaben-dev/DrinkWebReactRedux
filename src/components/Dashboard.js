@@ -9,7 +9,7 @@ function Dashboard(){
   return(
     <>
       <TopBar/>
-      <SearchBar/>
+      <SearchBar input=''/>
       <RandomDrinksBoard/>
       <ChooseCharacterToBrowseBy/>
     </>

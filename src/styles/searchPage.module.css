@@ -3,7 +3,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 55px;
+    margin-top: 45px;
     border: 1px solid rgb(142, 189, 199);
     width: 40%;
     font-size: inherit;
@@ -37,9 +37,8 @@
 @media (min-width: 769px) {
   .selectFilter select{
     display: block;
-    margin-top: 55px;
-    margin-left: 60%;
-    margin-right: 40%;
+    margin-left: 65%;
+    margin-right: 35%;
     border: 1px solid rgb(142, 189, 199);
     font-size: inherit;
     padding: 4px 34px 4px 17px;

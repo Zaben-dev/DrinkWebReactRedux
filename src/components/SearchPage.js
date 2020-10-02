@@ -1,6 +1,7 @@
 import React , {useEffect, useCallback}  from 'react';
 import SelectFilter from './SelectFilter';
 import TopBar from './TopBar';
+import SearchBar from './SearchBar';
 import DrinkMiniature from './DrinkMiniature';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
@@ -29,6 +30,7 @@ function SearchPage(){
     return(
       <>
         <TopBar/>
+        <SearchBar input={string}/>
         <div className={styles.noResults}> 
           <FaSearch/> Sorry, no results were found...
         </div>
@@ -44,6 +46,7 @@ function SearchPage(){
         return (
           <>
             <TopBar/>
+            <SearchBar input={string}/>
             <SelectFilter/>
             <div className={styles.drinksContainer}>
               {results.map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
@@ -54,6 +57,7 @@ function SearchPage(){
         return (
           <>
             <TopBar/>
+            <SearchBar input={string}/>
             <SelectFilter/>
             <div className={styles.drinksContainer}>
               {results.filter(drink => drink.strAlcoholic === 'Non alcoholic').map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
@@ -64,6 +68,7 @@ function SearchPage(){
         return (
           <>
             <TopBar/>
+            <SearchBar input={string}/>
             <SelectFilter/>
             <div className={styles.drinksContainer}>
               {results.filter(drink => (drink.strAlcoholic === 'Alcoholic' || drink.strAlcoholic === 'Optional alcohol')).map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}

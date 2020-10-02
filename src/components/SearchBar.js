@@ -3,8 +3,8 @@ import {useHistory} from 'react-router-dom';
 import styles from '../styles/searchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 
-function SearchBar(){
-  const [input, setInput] = useState('');
+function SearchBar(props){
+  const [input, setInput] = useState(props.input);
   let history = useHistory();
 
   function handleChange(event) { 
