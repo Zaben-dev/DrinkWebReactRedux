@@ -1,9 +1,15 @@
-import {ADD_SEARCH_RESULTS, SET_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER} from "./actionTypes";
+import {ADD_SEARCH_RESULTS, SET_USER_INFO, CLEAR_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER} from "./actionTypes";
 
 export function setUserInfo(userInfo){
   return{
     type: SET_USER_INFO,
     userInfo
+  }
+}
+
+export function clearUserInfo(){
+  return{
+    type: CLEAR_USER_INFO
   }
 }
 

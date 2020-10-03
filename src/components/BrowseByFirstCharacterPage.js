@@ -14,7 +14,6 @@ function BrowseByFirstCharacterPage(){
     let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${character}`);
     let results = await data.json();
     setDrinks(results.drinks);
-    console.log(results);
   },[character])
 
   useEffect(()=>{
