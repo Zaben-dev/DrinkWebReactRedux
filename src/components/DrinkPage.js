@@ -1,6 +1,7 @@
 import React, {useEffect, useCallback, useState}  from 'react';
 import {useParams} from "react-router-dom";
 import TopBar from './TopBar';
+import AddComment from './AddComment';
 import DrinkIngredients from './DrinkIngredients';
 import styles from '../styles/drinkPage.module.css'
 
@@ -32,6 +33,7 @@ function DrinkPage(){
           <div className={styles.glass}>glass: {drink.strGlass}</div>
           <div><DrinkIngredients drink={drink}/></div>
           <div className={styles.description}>{drink.strInstructions}</div>
+          <AddComment drinkId={id}/>
         </div>)
       }
     </>

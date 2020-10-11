@@ -37,16 +37,23 @@
   }
 
   .ingredients{
-    padding-top:4%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .ingredientsContainer{
+    padding-top: 1%;
     grid-area: ingredients;
     line-height: 110%;
     text-align: center;
     font-size: 15px;
+    margin-right:12%;
   }
 
-  .list{
+  .ElementOfIngredients{
     list-style-type: square;
     display: list-item;
+    list-style-position: inside;
   }
 
   .description{
@@ -102,13 +109,18 @@
   }
 
   .ingredients{
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .ingredientsContainer{
     grid-area: ingredients;
     line-height: 140%;
     display: flex;
     align-items: center;
   }
 
-  .listElementOfIngredients{
+  .ElementOfIngredients{
     list-style-type: square;
     display: list-item;
   }

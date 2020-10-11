@@ -37,11 +37,13 @@ function DrinkIngredients(props){
   }
 
   return(
-    <div className={styles.ingredients}>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ingredients:<br/>
-      {Object.keys(props.drink).length !== 0 &&
-      <ul>{zipIngredientsAndMeasures(returnIngredientsAsArray(), returnMeasuresAsArray()).map((x, index)=> <li className={styles.listElementOfIngredients} key={index}>{x}</li>)}</ul>}
-    </div>
+    <>
+      <div className={styles.ingredients}>ingredients:</div>
+      <div className={styles.ingredientsContainer}>
+        {Object.keys(props.drink).length !== 0 &&
+        <ul>{zipIngredientsAndMeasures(returnIngredientsAsArray(), returnMeasuresAsArray()).map((x, index)=> <li className={styles.ElementOfIngredients} key={index}>{x}</li>)}</ul>}
+      </div>
+    </>
   )
 }
 
