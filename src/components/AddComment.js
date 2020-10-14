@@ -1,5 +1,5 @@
 import React, {useState}  from 'react';
-import styles from'../styles/addComment.module.css';
+import styles from '../styles/addComment.module.css';
 import firebase from '../firebase';
 import {useSelector} from 'react-redux';
 import 'firebase/firestore';
@@ -22,7 +22,7 @@ function AddComment(props){
 
   function handleSubmit(){
     db.collection('comments').doc().set({
-      drink: props.drinkId,
+      drinkId: props.drinkId,
       uid: userInfo.uid,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       name: userInfo.displayName,
@@ -34,7 +34,7 @@ function AddComment(props){
         setResultMessage('Comment added successfully!');
     })
     .catch(function(error) {
-        setResultMessage('Something went wrong. Check if your comment has beetween 3 and 500 characters.');
+        setResultMessage('Something went wrong. Check if your comment has beetween 3 and 2000 characters.');
     });
   }
 

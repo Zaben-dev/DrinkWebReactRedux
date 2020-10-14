@@ -1,0 +1,51 @@
+@media (max-width: 768px){
+  .comment{
+    background-color:rgba(77, 133, 185, 0.55);
+    grid-column: 1;
+    margin-top:30px;
+    width:92%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    min-height:65px;
+  }
+
+  .info{
+    text-align: left;
+    padding-left: 7px;
+    padding-top: 7px;
+    color:rgb(35, 66, 95);
+    font-size:14px;
+  }
+
+  .content{
+    padding: 10px 16px 10px 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 769px) {
+  .comment{
+    background-color:rgba(77, 133, 185, 0.55);
+    grid-column: 1;
+    margin-top:35px;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    min-height:70px;
+  }
+
+  .info{
+    text-align: left;
+    padding-left: 7px;
+    padding-top: 7px;
+    color:rgb(35, 66, 95);
+    font-size:14px;
+  }
+
+  .content{
+    padding: 10px 16px 10px 16px;
+    line-height: 1.4;
+  }
+}

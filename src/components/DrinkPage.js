@@ -2,12 +2,15 @@ import React, {useEffect, useCallback, useState}  from 'react';
 import {useParams} from "react-router-dom";
 import TopBar from './TopBar';
 import AddComment from './AddComment';
+import Comments from './Comments';
 import DrinkIngredients from './DrinkIngredients';
+import {useSelector} from 'react-redux';
 import styles from '../styles/drinkPage.module.css'
 
 function DrinkPage(){
   let {id} = useParams();
   const [drink, setDrink] = useState(null);
+  const userInfo = useSelector(state => state.userInfo.userInfo);
 
   const fetchDrink = useCallback( async () => {
     let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
@@ -17,8 +20,6 @@ function DrinkPage(){
 
   useEffect(()=>{
     fetchDrink();
-    return () => {
-    }
   },[fetchDrink])
   
   return(
@@ -27,14 +28,18 @@ function DrinkPage(){
       {drink === null ? (
         null
       ) : (
-        <div className={styles.container}>
-          <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb} alt="drink"/></div>
-          <div className={styles.drinkName}>{drink.strDrink}</div>
-          <div className={styles.glass}>glass: {drink.strGlass}</div>
-          <div><DrinkIngredients drink={drink}/></div>
-          <div className={styles.description}>{drink.strInstructions}</div>
-          <AddComment drinkId={id}/>
-        </div>)
+        <>
+          <div className={styles.container}>
+            <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb} alt="drink"/></div>
+            <div className={styles.drinkName}>{drink.strDrink}</div>
+            <div className={styles.glass}>glass: {drink.strGlass}</div>
+            <div><DrinkIngredients drink={drink}/></div>
+            <div className={styles.description}>{drink.strInstructions}</div>
+            {Object.keys(userInfo).length !== 0 ? <AddComment drinkId={id}/> : <div className={styles.signInInfo}>Sign in to add comments</div>}
+          </div>
+          <Comments drinkId={id}/>
+        </>
+        )
       }
     </>
   )

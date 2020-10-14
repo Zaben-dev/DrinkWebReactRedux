@@ -63,6 +63,14 @@
     margin-right:5%;
     text-align: center;
   }
+
+  .signInInfo{
+    color: rgba(36, 95, 150);
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right:auto;
+    font-size:15px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -72,6 +80,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top:55px;
+    margin-bottom: 35px;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr 0.4fr 4fr 3fr;
     grid-template-areas: 
@@ -134,5 +143,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .signInInfo{
+    color: rgba(36, 95, 150, 0.979);
+    margin-left: 23%;
+    font-size:15px;
   }
 }

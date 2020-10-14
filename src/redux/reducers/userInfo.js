@@ -4,7 +4,7 @@ const initialState = {
   userInfo: {}
 }
 
-function userInfo(state=initialState, action){
+function userInfo(state = initialState, action){
     switch(action.type){
       case SET_USER_INFO:{
         return{...state, userInfo: action.userInfo}

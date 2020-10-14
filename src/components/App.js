@@ -47,7 +47,7 @@ function App() {
          </Route>
         </Switch>
       </Router>
-      <br/><br/><br/><br/>
+      <br/><br/><br/>
       <Footer/>
     </>
   );
