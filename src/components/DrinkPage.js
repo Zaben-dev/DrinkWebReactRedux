@@ -8,15 +8,15 @@ import {useSelector} from 'react-redux';
 import styles from '../styles/drinkPage.module.css'
 
 function DrinkPage(){
-  let {id} = useParams();
+  let {drinkId} = useParams();
   const [drink, setDrink] = useState(null);
   const userInfo = useSelector(state => state.userInfo.userInfo);
 
   const fetchDrink = useCallback( async () => {
-    let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+    let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`);
     let drink = await data.json();
     setDrink(drink.drinks[0]);
-  },[id])
+  },[drinkId])
 
   useEffect(()=>{
     fetchDrink();
@@ -35,9 +35,9 @@ function DrinkPage(){
             <div className={styles.glass}>glass: {drink.strGlass}</div>
             <div><DrinkIngredients drink={drink}/></div>
             <div className={styles.description}>{drink.strInstructions}</div>
-            {Object.keys(userInfo).length !== 0 ? <AddComment drinkId={id}/> : <div className={styles.signInInfo}>Sign in to add comments</div>}
+            {Object.keys(userInfo).length !== 0 ? <AddComment/> : <div className={styles.signInInfo}>Sign in to add comments</div>}
           </div>
-          <Comments drinkId={id}/>
+          <Comments/>
         </>
         )
       }

@@ -1,14 +1,16 @@
 import React, {useState}  from 'react';
+import {useParams} from "react-router-dom";
 import styles from '../styles/addComment.module.css';
 import firebase from '../firebase';
 import {useSelector} from 'react-redux';
 import 'firebase/firestore';
 
-function AddComment(props){
+function AddComment(){
   const [input, setInput] = useState('');
   const [isExpanded, setIsExpanded] = useState(false);
   const [resultMessage, setResultMessage] = useState('');
   const userInfo = useSelector(state => state.userInfo.userInfo);
+  let {drinkId} = useParams();
   let db = firebase.firestore();
 
   function Expand(){
@@ -22,7 +24,7 @@ function AddComment(props){
 
   function handleSubmit(){
     db.collection('comments').doc().set({
-      drinkId: props.drinkId,
+      drinkId: drinkId,
       uid: userInfo.uid,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       name: userInfo.displayName,

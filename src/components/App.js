@@ -36,7 +36,7 @@ function App() {
          <Route path = "/login">
             <AuthenticationPage/>
          </Route>
-         <Route path = "/drink/:id">
+         <Route path = "/drink/:drinkId">
            <DrinkPage/>
          </Route>
          <Route path = "/search/:string">
