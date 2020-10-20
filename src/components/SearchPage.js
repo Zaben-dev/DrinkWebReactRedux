@@ -25,7 +25,6 @@ function SearchPage(){
     fetchResults();
   },[fetchResults])
 
-
   if (results === null){
     return(
       <>
@@ -41,43 +40,18 @@ function SearchPage(){
     return null;
   }
   else{
-    switch(filter){
-      case VisibilityFilters.SHOW_ALL:{
-        return (
-          <>
-            <TopBar/>
-            <SearchBar input={string}/>
-            <SelectFilter/>
-            <div className={styles.drinksContainer}>
-              {results.map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
-            </div>
-          </>)  
-      }
-      case VisibilityFilters.SHOW_NON_ALCOHOLIC:{
-        return (
-          <>
-            <TopBar/>
-            <SearchBar input={string}/>
-            <SelectFilter/>
-            <div className={styles.drinksContainer}>
-              {results.filter(drink => drink.strAlcoholic === 'Non alcoholic').map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
-            </div>
-          </>)
-      }
-      case VisibilityFilters.SHOW_ALCOHOLIC:{
-        return (
-          <>
-            <TopBar/>
-            <SearchBar input={string}/>
-            <SelectFilter/>
-            <div className={styles.drinksContainer}>
-              {results.filter(drink => (drink.strAlcoholic === 'Alcoholic' || drink.strAlcoholic === 'Optional alcohol')).map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
-            </div>
-          </>)
-      }
-      default:
-        throw new Error('Unknown filter: ' + filter)
-    }
+    return(
+      <>
+        <TopBar/>
+        <SearchBar input={string}/>
+        <SelectFilter/>
+        <div className={styles.drinksContainer}>
+          {filter === VisibilityFilters.SHOW_ALL && results.map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
+          {filter === VisibilityFilters.SHOW_NON_ALCOHOLIC && results.filter(drink => drink.strAlcoholic === 'Non alcoholic').map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
+          {filter === VisibilityFilters.SHOW_ALCOHOLIC && results.filter(drink => (drink.strAlcoholic === 'Alcoholic' || drink.strAlcoholic === 'Optional alcohol')).map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
+        </div>
+      </>
+    )  
   }
 }
 

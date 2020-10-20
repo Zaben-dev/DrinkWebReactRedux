@@ -3,12 +3,12 @@ import firebase from '../firebase';
 import 'firebase/firestore';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import Modal from 'react-modal';
-import styles from '../styles/comment.module.css'
+import styles from '../styles/comments.module.css'
 
 function DeleteComment(props){
   let db = firebase.firestore();
   Modal.setAppElement('#root');
-  const [modalIsOpen,setIsOpen] = React.useState(false);
+  const [modalIsOpen,setIsOpen] = useState(false);
   
   function openModal() {
     setIsOpen(true);

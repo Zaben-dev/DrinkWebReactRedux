@@ -1,4 +1,4 @@
-import {ADD_SEARCH_RESULTS, SET_USER_INFO, CLEAR_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER, ADD_COMMENT, REFRESH_COMMENTS} from "./actionTypes";
+import {ADD_SEARCH_RESULTS, SET_USER_INFO, CLEAR_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER, ADD_COMMENT, REFRESH_COMMENTS, SET_COMMENTS_ORDER} from "./actionTypes";
 
 export function setUserInfo(userInfo){
   return{
@@ -47,14 +47,29 @@ export const VisibilityFilters = {
 }
 
 export function addComment(comment){
- return{ 
-  type: ADD_COMMENT,
-  comment
- }
+  return{ 
+    type: ADD_COMMENT,
+    comment
+  }
 }
 
-export function refreshComments(comment){
+export function refreshComments(){
   return{
     type: REFRESH_COMMENTS
   }
 }
+
+export function setCommentsOrder(order){
+  return{
+    type: SET_COMMENTS_ORDER,
+    order
+  }
+}
+
+export const commentsOrderTypes = {
+    NEWEST_TO_OLDEST: 'NEWEST_TO_OLDEST',
+    OLDEST_TO_NEWEST: 'OLDEST_TO_NEWEST'
+}
+
+
+
