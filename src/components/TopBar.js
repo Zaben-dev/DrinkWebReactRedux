@@ -17,7 +17,7 @@ function TopBar(){
   ) : (
     <div className={styles.topBar}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
-      <img className={styles.profileImage} src={userInfo.photoURL} alt="profile"/>
+      <img className={styles.profileImage} src={userInfo.photoURL} alt="avatar"/>
       <div className={styles.displayName}> {userInfo && userInfo.displayName}</div>
       <div className={styles.buttonContainer}><SignOut/></div>
     </div>

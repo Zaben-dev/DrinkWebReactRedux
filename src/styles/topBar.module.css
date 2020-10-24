@@ -91,7 +91,6 @@
     color:rgba(70, 133, 192, 0.979);
     text-align: center;
     cursor:pointer;
-    transition-duration: 0.2s;
   }
 
   .homePageIcon:hover{

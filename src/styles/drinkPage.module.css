@@ -91,7 +91,7 @@
   }
 
   .imageContainer{
-    grid-area:image;
+    grid-area: image;
   }
 
   .image{
@@ -110,6 +110,38 @@
     font-size:2vw;
     font-weight: bold;
     overflow:hidden;
+  }
+
+  .star{
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    color: rgb(79, 137, 192);
+    text-align: center;
+    cursor: pointer;
+    font-size:43px;
+    margin-top:13px;
+    transition-duration: 0.4s;
+  }
+
+  .clickedStar{
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    color: rgb(184, 182, 88);
+    text-align: center;
+    cursor: pointer;
+    font-size:43px;
+    margin-top:13px;
+    transition-duration: 0.4s;
+  }
+
+  .star:hover{
+    transform: scale(1.15);
+  }
+
+  .clickedStar:hover{
+    transform: scale(1.15);
   }
 
   .glass{

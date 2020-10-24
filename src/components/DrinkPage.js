@@ -4,6 +4,7 @@ import TopBar from './TopBar';
 import AddComment from './AddComment';
 import Comments from './Comments';
 import DrinkIngredients from './DrinkIngredients';
+import FavoritesButton from './FavoritesButton';
 import {useSelector} from 'react-redux';
 import styles from '../styles/drinkPage.module.css'
 
@@ -31,7 +32,7 @@ function DrinkPage(){
         <>
           <div className={styles.container}>
             <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb} alt="drink"/></div>
-            <div className={styles.drinkName}>{drink.strDrink}</div>
+            <div className={styles.drinkName}>{drink.strDrink} &nbsp; {Object.keys(userInfo).length !== 0 && <FavoritesButton/>}</div>
             <div className={styles.glass}>glass: {drink.strGlass}</div>
             <div><DrinkIngredients drink={drink}/></div>
             <div className={styles.description}>{drink.strInstructions}</div>
