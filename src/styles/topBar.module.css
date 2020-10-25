@@ -4,7 +4,7 @@
     height: 40px;
     background-color:rgb(138, 198, 209);
     display: grid;
-    grid-template-columns: 10vw auto 10vw 30vw 2vw 30vw;
+    grid-template-columns: 10vw auto 60vw 2vw 35vw;
     position: fixed;
     width: 100%;
     align-items: center;
@@ -32,35 +32,61 @@
     transform: scale(1.1);
   }
 
-  .profileImage{
-    border-radius: 50%;
+  .userProfileButtonContainer{
     grid-column: 3;
-    height:83%;
+    justify-self: end;
+  }
+
+  .userProfileButton{
+    float: right;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .userProfileButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
+  }
+
+  .profileImage{
+    height: 28px;
+    border-radius: 50px;
+    border: 1px solid grey;
   }
 
   .displayName{
-    grid-column:4;
-    font-size:4vw;
+    margin-left: 9px;
+    font-size: 14px;
+    text-align: center;
+    padding-right: 5px;
   }
 
-  .buttonContainer{
-    grid-column:6;
-    width:100%;
+  .signInOutButtonContainer{
+    grid-column: 5;
+    width: 100%;
   }
 
-  .button{
-    padding: 2% 2% 2% 2%;
-    border: 2px;
-    background-color: rgba(70, 133, 192, 0.979);
-    color:white;
-    width:78%;
-    border-radius: 10px;
-    margin:auto;
-    display:block;
+  .signInOutButton{
+    width: 75%;
+    height: 31px;
+    align-items: center;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 14px;
+    border: none;
+    overflow: hidden;
+    font-size: 2vh;
+    outline: none;
   }
 
-  .button:hover{
-    background-color: rgba(55, 114, 170, 0.979);
+  .signInOutButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
+    cursor: pointer;
   }
 
 }
@@ -71,7 +97,7 @@
     height: 40px;
     background-color:rgb(138, 198, 209);
     display: grid;
-    grid-template-columns: 4vw auto 3vw 10vw 2vw 11vw;
+    grid-template-columns: 4vw auto 60vh 0.5vw 8vw;
     position: fixed;
     width: 100%;
     align-items: center;
@@ -88,44 +114,72 @@
     border: none;
     outline:none;
     font-size:25px;
-    color:rgba(70, 133, 192, 0.979);
+    padding-top: 5px;
+    color:rgba(70, 133, 192);
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
+    transition: 0.4s;
   }
 
   .homePageIcon:hover{
-    color: rgba(55, 114, 170, 0.979);
+    color: rgba(55, 114, 170);
     transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .userProfileButtonContainer{
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .userProfileButton{
+    float: right;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .userProfileButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
   }
 
   .profileImage{
-    border-radius: 50%;
-    grid-column: 3;
-    height:83%;
+    height: 28px;
+    border-radius: 50px;
+    border: 1px solid grey;
   }
 
   .displayName{
-    grid-column:4;
-    font-size:1.1vw;
+    margin-left: 9px;
+    font-size: 16px;
+    text-align: center;
+    padding-right: 5px;
   }
 
-  .buttonContainer{
-    grid-column:6;
-    width:100%;
+  .signInOutButtonContainer{
+    grid-column: 5;
+    width: 100%;
   }
 
-  .button{
-    padding: 2% 2% 2% 2%;
-    border: 2px;
-    background-color: rgba(70, 133, 192, 0.979);
-    color:white;
-    width:78%;
-    border-radius: 10px;
-    margin:auto;
-    display:block;
+  .signInOutButton{
+    width: 80%;
+    height: 31px;
+    align-items: center;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    outline: none;
   }
 
-  .button:hover{
-    background-color: rgba(55, 114, 170, 0.979);
+  .signInOutButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
+    cursor: pointer;
   }
 }

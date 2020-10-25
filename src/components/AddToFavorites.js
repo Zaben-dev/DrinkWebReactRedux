@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux';
 import firebase from '../firebase';
 import 'firebase/firestore';
 
-function FavoritesButton(){
+function AddToFavorites(){
   const [isFavorite, setIsFavorite] = useState(false);
   const userInfo = useSelector(state => state.userInfo.userInfo);
   let {drinkId} = useParams();
@@ -21,13 +21,12 @@ function FavoritesButton(){
         }
       });
     }
-  },[userInfo, db])
+  },[userInfo, db, drinkId])
 
   function handleClick(){
     if(isFavorite === false){
       db.collection("users").doc(userInfo.uid).collection("favorites").doc(drinkId).set({
-        drinkId: drinkId,
-        addTime: firebase.firestore.FieldValue.serverTimestamp()
+        drinkId: drinkId
       })
       .then(
         setIsFavorite(true)
@@ -63,4 +62,4 @@ function FavoritesButton(){
   )
 }
 
-export default FavoritesButton;
+export default AddToFavorites;

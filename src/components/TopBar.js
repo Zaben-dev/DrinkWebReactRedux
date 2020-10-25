@@ -2,6 +2,7 @@ import React from 'react';
 import SignOut from './SignOut';
 import SignIn from './SignIn';
 import HomePageIcon from './HomePageIcon';
+import UserProfileButton from './UserProfileButton';
 import styles from '../styles/topBar.module.css';
 import {useSelector} from 'react-redux';
 
@@ -12,14 +13,13 @@ function TopBar(){
   (Object.keys(userInfo).length === 0 && userInfo.constructor === Object) ? (
     <div className={styles.topBar}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
-      <div className={styles.buttonContainer}><SignIn/></div>
+      <div className={styles.signInOutButtonContainer}><SignIn/></div>
     </div>
   ) : (
     <div className={styles.topBar}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
-      <img className={styles.profileImage} src={userInfo.photoURL} alt="avatar"/>
-      <div className={styles.displayName}> {userInfo && userInfo.displayName}</div>
-      <div className={styles.buttonContainer}><SignOut/></div>
+      <div className={styles.userProfileButtonContainer}><UserProfileButton/></div>
+      <div className={styles.signInOutButtonContainer}><SignOut/></div>
     </div>
      )
   )

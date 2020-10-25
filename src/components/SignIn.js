@@ -11,7 +11,7 @@ function SignIn(){
     
   return(
     <div>
-      <button className={styles.button} onClick={handleClick}>sign in</button>
+      <button className={styles.signInOutButton} onClick={handleClick}>sign in</button>
     </div>
     )
 }

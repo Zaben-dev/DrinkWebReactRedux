@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+
+  .drinksContainer{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    grid-row-gap: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .profileImage{
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid grey;
+  }
+
+  .displayName{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    color:  rgb(27, 65, 73);
+  }
+
+  .myFavoritesText{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(27, 65, 73);
+  }
+
+  .emptyFavoritesInfo{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(27, 65, 73);
+  }
+
+  .drinksContainer{
+    margin-left:auto;
+    margin-right:auto;
+    width: 72%;
+    margin-top: 35px;
+    grid-row-gap: 80px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}

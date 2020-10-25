@@ -27,7 +27,42 @@
   .drinkName{
     grid-area: drinkName;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+
+  .star{
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    color: rgb(79, 137, 192);
     text-align: center;
+    cursor: pointer;
+    font-size: 36px;
+    margin-top: 7px;
+    transition-duration: 0.4s;
+  }
+
+  .star:hover{
+    transform: scale(1.15);
+  }
+
+  .clickedStar{
+    background-color: Transparent;
+    border: none;
+    outline: none;
+    color: rgb(184, 182, 88);
+    text-align: center;
+    cursor: pointer;
+    font-size: 36px;
+    margin-top: 7px;
+    transition-duration: 0.4s;
+  }
+
+  .clickedStar:hover{
+    transform: scale(1.15);
   }
 
   .glass{
@@ -124,6 +159,10 @@
     transition-duration: 0.4s;
   }
 
+  .star:hover{
+    transform: scale(1.15);
+  }
+
   .clickedStar{
     background-color: Transparent;
     border: none;
@@ -134,10 +173,6 @@
     font-size:43px;
     margin-top:13px;
     transition-duration: 0.4s;
-  }
-
-  .star:hover{
-    transform: scale(1.15);
   }
 
   .clickedStar:hover{

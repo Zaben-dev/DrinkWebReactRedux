@@ -21,7 +21,7 @@ function SignOut(){
     
   return(
     <div>
-      <button className={styles.button} onClick={handleClick}>sign out</button>
+      <button className={styles.signInOutButton} onClick={handleClick}>sign out</button>
     </div>
     )
 }
