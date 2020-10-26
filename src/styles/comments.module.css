@@ -22,7 +22,7 @@
   .commentContainer{
     display: flex;
     flex-wrap: wrap;
-    background-color:rgba(77, 133, 185, 0.55);
+    background-color: rgba(77, 133, 185, 0.55);
     margin-top: 30px;
     width: 92%;
     margin-left: auto;
@@ -38,11 +38,11 @@
     to   { opacity: 1; }
   }
 
-  .info{
+  .authorAndTime{
     text-align: left;
     padding-left: 7px;
-    color:rgb(35, 66, 95);
-    font-size:14px;
+    color: rgb(35, 66, 95);
+    font-size: 14px;
   }
 
   .content{
@@ -53,13 +53,13 @@
   .deleteButton{
     background-color: Transparent;
     border: none;
-    outline:none;
+    outline: none;
     margin-top: 4px;
     margin-left: 6px;
-    font-size:26px;
-    color:rgba(41, 78, 112);
+    font-size: 26px;
+    color: rgba(41, 78, 112);
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     transition-duration: 0.2s;
   }
 
@@ -171,12 +171,12 @@
     to   { opacity: 1; }
   }
 
-  .info{
+  .authorAndTime{
     text-align: left;
     vertical-align: middle;
     padding-left: 7px;
-    color:rgb(35, 66, 95);
-    font-size:14px;
+    color: rgb(35, 66, 95);
+    font-size: 14px;
   }
 
   .content{
@@ -187,13 +187,13 @@
   .deleteButton{
     background-color: Transparent;
     border: none;
-    outline:none;
+    outline: none;
     margin-top: 4px;
     margin-left: 6px;
-    font-size:26px;
-    color:rgba(41, 78, 112);
+    font-size: 26px;
+    color: rgba(41, 78, 112);
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     transition-duration: 0.2s;
   }
 
@@ -208,14 +208,14 @@
   }
 
   .modal{
-    width:35%;
+    width: 35%;
     border-radius: 5px;
     height: 106px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     outline: none;
     margin-left: auto;
-    margin-right:auto;
-    margin-top:15%;
+    margin-right: auto;
+    margin-top: 15%;
     background-color: rgba(138, 198, 209);
   }
 
@@ -238,8 +238,8 @@
     font-size: 17px;
     border: 2px;
     background-color: rgba(70, 133, 192);
-    color:white;
-    width:20%;
+    color: white;
+    width: 20%;
     border-radius: 10px;
     margin-right: 20px;
     outline: none;
@@ -255,8 +255,8 @@
     font-size: 17px;
     border: 2px;
     background-color: rgba(192, 70, 70);
-    color:white;
-    width:20%;
+    color: white;
+    width: 20%;
     border-radius: 10px;
     margin-left: 20px;
     outline: none;

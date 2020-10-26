@@ -1,33 +1,38 @@
 @media (max-width: 768px) {
-  .button  {
-    width:100%;
-    margin-top:3vh;
+  .signInButton{
+    width: 100%;
+    margin-top: 3vh;
     padding: 4% 8% 4% 8%;
     border: 0px;
     background-color: #535353;
-    color:white;
+    color: white;
     border-radius: 18px;
     overflow: hidden; 
-    font-size:17px;
+    font-size: 17px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   }
 
+  .signInButton:hover {
+    background-color: #474747;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  }
+
   .container{
-    font-size:20px;
-    margin-top:32vh;
+    font-size: 20px;
+    margin-top: 32vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width:55%;
+    width: 55%;
     text-align: center;
   }
 
   .or{
-    font-size:15px;
+    font-size: 15px;
   }
 
   .link{
-    font-size:16px;
+    font-size: 16px;
     color: rgb(44, 108, 122);
   }
 
@@ -37,41 +42,41 @@
 }
 
 @media (min-width: 769px) {
-  .button{
-    width:100%;
-    margin-top:3vh;
+  .signInButton{
+    width: 100%;
+    margin-top: 3vh;
     padding: 3% 6% 3% 6%;
     border: 0px;
     background-color: #535353;
-    color:white;
+    color: white;
     border-radius: 18px;
     overflow: hidden; 
-    font-size:17px;
+    font-size: 17px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     outline: none;
   }
   
-  .button:hover {
+  .signInButton:hover {
     background-color: #474747;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
   }
   
   .container{
-    font-size:20px;
-    margin-top:30vh;
+    font-size: 20px;
+    margin-top: 30vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width:18%;
+    width: 18%;
     text-align: center;
   }
 
   .or{
-    font-size:15px;
+    font-size: 15px;
   }
 
   .link{
-    font-size:16px;
+    font-size: 16px;
     color: rgb(44, 108, 122);
   }
 

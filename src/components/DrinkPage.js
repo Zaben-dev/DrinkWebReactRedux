@@ -32,10 +32,10 @@ function DrinkPage(){
         <>
           <div className={styles.container}>
             <div className={styles.imageContainer}> <img className={styles.image} src={drink.strDrinkThumb} alt="drink"/></div>
-            <div className={styles.drinkName}>{drink.strDrink} &nbsp; {Object.keys(userInfo).length !== 0 && <AddToFavorites/>}</div>
+            <div className={styles.name}>{drink.strDrink} &nbsp; {Object.keys(userInfo).length !== 0 && <AddToFavorites/>}</div>
             <div className={styles.glass}>glass: {drink.strGlass}</div>
             <div><DrinkIngredients drink={drink}/></div>
-            <div className={styles.description}>{drink.strInstructions}</div>
+            <div className={styles.instructions}>{drink.strInstructions}</div>
             {Object.keys(userInfo).length !== 0 ? <AddComment/> : <div className={styles.signInInfo}>Sign in to add comments</div>}
           </div>
           <Comments/>

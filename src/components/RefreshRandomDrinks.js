@@ -13,7 +13,7 @@ function RefreshDrinksInBoard(){
     
   return(
     <div>
-      <button className={styles.button} onClick={handleClick}><HiOutlineRefresh/></button>
+      <button className={styles.refreshButton} onClick={handleClick}><HiOutlineRefresh/></button>
     </div>
     )
 }

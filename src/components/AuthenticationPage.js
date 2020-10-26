@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Authenticate from './Authenticate';
 import firebase from '../firebase';
 import {useHistory, Link} from 'react-router-dom';
-import styles from '../styles/loginPage.module.css';
+import styles from '../styles/signInPage.module.css';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 function AuthenticationPage(){

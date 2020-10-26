@@ -1,15 +1,15 @@
 @media (max-width: 768px) {
   .board{
-    margin-top:34px;
+    margin-top: 34px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-row-gap: 3vh;
     align-items: start;
     min-height: 101vw;
-    overflow:hidden;
+    overflow: hidden;
   }
   
-  .button{
+  .refreshButton{
     margin-left: 38%;
     background-color: Transparent;
     color: rgb(80, 118, 175);
@@ -20,6 +20,10 @@
     outline: none;
     font-size: 35px;
     transition-duration: 0.4s;
+   }
+
+   .refreshButton:hover{
+      transform: scale( 1.25);
    }
 }
 
@@ -36,10 +40,10 @@
     height:250px;
   }
 
-  .button{
+  .refreshButton{
     background-color: Transparent;
     color: rgb(80, 118, 175);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
     overflow: hidden;
@@ -49,7 +53,7 @@
     transition-duration: 0.4s;
    }
 
-   .button:hover{
-    transform: scale( 1.25);
+   .refreshButton:hover{
+      transform: scale( 1.25);
    }
 }

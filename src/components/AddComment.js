@@ -50,7 +50,7 @@ function AddComment(){
     return(
       <>
         <div className={styles.addCommentContainer}>
-          <button className={styles.button} onClick={Expand}>Add comment</button>
+          <button className={styles.addCommentButton} onClick={Expand}>add comment</button>
           <br/>
           {resultMessage !=='' &&
             <div className={styles.resultMessage}>
@@ -66,7 +66,7 @@ function AddComment(){
       <div className={styles.addCommentContainer}>
         <div className={styles.displayName}>{userInfo.displayName}:</div>
         <textarea className={styles.textarea} onKeyPress={handleKeypress} value={input} onChange={handleChange} placeholder="comment..."/>
-        <button className={styles.button} onClick={handleSubmit}>Add comment</button>
+        <button className={styles.addCommentButton} onClick={handleSubmit}>add comment</button>
         {resultMessage !=='' &&
           <div className={styles.resultMessage}>
             {resultMessage}

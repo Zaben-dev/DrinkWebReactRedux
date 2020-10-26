@@ -11,12 +11,12 @@ function TopBar(){
 
   return(
   (Object.keys(userInfo).length === 0 && userInfo.constructor === Object) ? (
-    <div className={styles.topBar}>
+    <div className={styles.container}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
       <div className={styles.signInOutButtonContainer}><SignIn/></div>
     </div>
   ) : (
-    <div className={styles.topBar}>
+    <div className={styles.container}>
       <div className={styles.homePageIconContainer}><HomePageIcon/></div>
       <div className={styles.userProfileButtonContainer}><UserProfileButton/></div>
       <div className={styles.signInOutButtonContainer}><SignOut/></div>

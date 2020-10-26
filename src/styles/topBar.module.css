@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .topBar{
+  .container{
     overflow: hidden;
     height: 40px;
     background-color:rgb(138, 198, 209);
@@ -19,11 +19,11 @@
   .homePageIcon{
     background-color: Transparent;
     border: none;
-    outline:none;
-    font-size:25px;
-    color:rgba(70, 133, 192, 0.979);
+    outline: none;
+    font-size: 25px;
+    color: rgba(70, 133, 192, 0.979);
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     transition-duration: 0.2s;
   }
 
@@ -92,7 +92,7 @@
 }
 
 @media (min-width: 769px) {
-  .topBar{
+  .container{
     overflow: hidden;
     height: 40px;
     background-color:rgb(138, 198, 209);
@@ -112,10 +112,10 @@
   .homePageIcon{
     background-color: Transparent;
     border: none;
-    outline:none;
-    font-size:25px;
+    outline: none;
+    font-size: 25px;
     padding-top: 5px;
-    color:rgba(70, 133, 192);
+    color: rgba(70, 133, 192);
     text-align: center;
     cursor: pointer;
     transition: 0.4s;

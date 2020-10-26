@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
-import styles from'../styles/loginPage.module.css';
+import styles from'../styles/signInPage.module.css';
 
 function Authenticate(props){
   
@@ -10,7 +10,7 @@ function Authenticate(props){
   
   return(
     <div>
-      <button className={styles.button} onClick={handleClick}>{props.providerName}&nbsp;&nbsp;&nbsp;<span>{props.icon}</span></button>
+      <button className={styles.signInButton} onClick={handleClick}>{props.providerName}&nbsp;&nbsp;&nbsp;<span>{props.icon}</span></button>
     </div>
     )
 }

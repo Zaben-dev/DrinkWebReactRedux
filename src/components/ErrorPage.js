@@ -14,7 +14,7 @@ function ErrorPage(){
     <>
       <div className={styles.errorIcon}><BiErrorCircle/></div>
       <div className={styles.errorMessage}>Sorry, something went Wrong.</div>
-      <button onClick={handleClick} className={styles.goBackButton}>home page</button>
+      <button onClick={handleClick} className={styles.homePageButton}>home page</button>
     </>
   )
 }
