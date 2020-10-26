@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  .errorIcon{
+    text-align: center;
+    margin-top: 55%;
+    font-size:  45px;
+  }
+
+  .errorMessage{
+    margin-top: 10px;
+    font-size: 30px;;
+    text-align: center;
+  }
+
+  .goBackButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 55%;
+    height: 31px;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .goBackButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .errorIcon{
+    text-align: center;
+    margin-top: 18%;
+    font-size:  45px;
+  }
+
+  .errorMessage{
+    margin-top: 10px;
+    font-size: 30px;;
+    text-align: center;
+  }
+
+  .goBackButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 12%;
+    height: 31px;
+    background-color: rgba(70, 133, 192, 0.6);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .goBackButton:hover{
+    background-color: rgba(55, 105, 151, 0.6);
+    cursor: pointer;
+  }
+}

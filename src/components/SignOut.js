@@ -11,12 +11,12 @@ function SignOut(){
   let history = useHistory();
 
   function handleClick(){
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(function(){
       dispatch(clearUserInfo());
       history.push('/login');
-      }).catch(function(error) {
-            // An error happened.
-      }); 
+    }).catch(function() {
+      history.push('/error');
+    }); 
   }
     
   return(

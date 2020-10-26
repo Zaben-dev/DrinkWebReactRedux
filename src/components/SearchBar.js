@@ -12,7 +12,7 @@ function SearchBar(props){
   }
 
   function handleSubmit() {
-    history.push(`/search/${input}`)
+    history.push(`/search/${input}`);
   }
 
   function handleKeypress(event){ 

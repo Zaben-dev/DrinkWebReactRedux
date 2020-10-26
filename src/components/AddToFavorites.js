@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {AiOutlineStar, AiFillStar} from 'react-icons/ai';
 import styles from '../styles/drinkPage.module.css';
-import {useParams} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 import {useSelector} from 'react-redux';
 import firebase from '../firebase';
 import 'firebase/firestore';
@@ -11,6 +11,7 @@ function AddToFavorites(){
   const userInfo = useSelector(state => state.userInfo.userInfo);
   let {drinkId} = useParams();
   let db = firebase.firestore();
+  let history = useHistory();
 
   useEffect(() => {
     if(Object.keys(userInfo).length !== 0){
@@ -31,8 +32,8 @@ function AddToFavorites(){
       .then(
         setIsFavorite(true)
       )
-      .catch(function(error) {
-        console.error("Error writing document: ", error);
+      .catch(function() {
+        history.push('/error');
       });
     }
 
@@ -41,8 +42,8 @@ function AddToFavorites(){
         .then(
           setIsFavorite(false)
         )
-        .catch(function(error) {
-          console.error("Error removing document: ", error);
+        .catch(function() {
+          history.push('/error');
         });
     }
   }

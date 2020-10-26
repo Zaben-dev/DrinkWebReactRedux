@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import DrinkPage from './DrinkPage';
 import SearchPage from './SearchPage';
 import UserProfilePage from './UserProfilePage';
+import ErrorPage from './ErrorPage';
 import BrowseByFirstCharacterPage from './BrowseByFirstCharacterPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import {setUserInfo} from '../redux/actions'
@@ -48,6 +49,9 @@ function App() {
          </Route>
          <Route path = "/userProfile">
            <UserProfilePage/>
+         </Route>
+         <Route path = "*">
+           <ErrorPage/>
          </Route>
         </Switch>
       </Router>

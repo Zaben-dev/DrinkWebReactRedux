@@ -2,13 +2,15 @@ import React, {useState}  from 'react';
 import firebase from '../firebase';
 import 'firebase/firestore';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
+import {useHistory} from "react-router-dom";
 import Modal from 'react-modal';
 import styles from '../styles/comments.module.css'
 
 function DeleteComment(props){
   let db = firebase.firestore();
-  Modal.setAppElement('#root');
   const [modalIsOpen,setIsOpen] = useState(false);
+  let history = useHistory();
+  Modal.setAppElement('#root');
   
   function openModal() {
     setIsOpen(true);
@@ -19,11 +21,10 @@ function DeleteComment(props){
   }
 
   function deleteComment(){
-    db.collection('comments').doc(props.commentId).delete().then(function() {
-      console.log("Document successfully deleted!");
-  }).catch(function(error) {
-      console.error("Error removing document: ", error);
-  });
+    db.collection('comments').doc(props.commentId).delete()
+    .catch(function() {
+      history.push('/error');
+    });
     closeModal();
   }
 
