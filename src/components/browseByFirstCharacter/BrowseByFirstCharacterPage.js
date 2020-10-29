@@ -1,9 +1,9 @@
 import React , {useEffect, useCallback, useState}  from 'react';
-import TopBar from './TopBar';
-import ChooseCharacterToBrowseBy from './ChooseCharacterToBrowseBy';
-import DrinkMiniature from './DrinkMiniature';
+import TopBar from '../topbar/TopBar';
+import ChooseCharacterToBrowseBy from '../common/ChooseCharacterToBrowseBy';
+import DrinkMiniature from '../common/DrinkMiniature';
 import {useParams} from "react-router-dom";
-import styles from '../styles/BrowseByFirstCharacterPage.module.css';
+import styles from '../../styles/BrowseByFirstCharacterPage.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 function BrowseByFirstCharacterPage(){
@@ -20,7 +20,6 @@ function BrowseByFirstCharacterPage(){
     fetchResults();
   },[fetchResults])
 
-  
   if(drinks === ''){
     return null
   }

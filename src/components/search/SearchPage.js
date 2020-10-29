@@ -1,12 +1,12 @@
 import React , {useEffect, useCallback}  from 'react';
-import SelectFilter from './SelectFilter';
-import TopBar from './TopBar';
-import SearchBar from './SearchBar';
-import DrinkMiniature from './DrinkMiniature';
+import SelectResultsFilter from './SelectResultsFilter';
+import TopBar from '../topbar/TopBar';
+import SearchBar from '../common/SearchBar';
+import DrinkMiniature from '../common/DrinkMiniature';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
-import {addSearchResults, VisibilityFilters} from '../redux/actions';
-import styles from '../styles/searchPage.module.css';
+import {addSearchResults, VisibilityFilters} from '../../redux/actions';
+import styles from '../../styles/searchPage.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 function SearchPage(){
@@ -44,7 +44,7 @@ function SearchPage(){
       <>
         <TopBar/>
         <SearchBar input={string}/>
-        <SelectFilter/>
+        <SelectResultsFilter/>
         <div className={styles.drinksContainer}>
           {filter === VisibilityFilters.SHOW_ALL && results.map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
           {filter === VisibilityFilters.SHOW_NON_ALCOHOLIC && results.filter(drink => drink.strAlcoholic === 'Non alcoholic').map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}

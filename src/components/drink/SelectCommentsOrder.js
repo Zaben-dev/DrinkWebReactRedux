@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {setCommentsOrder, commentsOrderTypes} from '../redux/actions';
-import styles from '../styles/comments.module.css';
+import {setCommentsOrder, commentsOrderTypes} from '../../redux/actions';
+import styles from '../../styles/comments.module.css';
 
-function SelectOrder(){
+function SelectCommentsOrder(){
   const dispatch = useDispatch();
   const order = useSelector(state => state.commentsOrder);
 
@@ -21,4 +21,4 @@ function SelectOrder(){
   );
 }
 
-export default SelectOrder;
+export default SelectCommentsOrder;

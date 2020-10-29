@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/drinkPage.module.css'
+import styles from '../../styles/drinkPage.module.css'
 
 function DrinkIngredients(props){
 

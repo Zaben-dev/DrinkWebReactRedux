@@ -1,8 +1,8 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../styles/topBar.module.css';
+import styles from '../../styles/topBar.module.css';
 
-function SignIn(){
+function RedirectToLogin(){
   let history = useHistory();
   
   function handleClick(){
@@ -11,9 +11,9 @@ function SignIn(){
     
   return(
     <div>
-      <button className={styles.signInOutButton} onClick={handleClick}>sign in</button>
+      <button className={styles.signInOutButton} onClick={handleClick}>Log in</button>
     </div>
     )
 }
 
-export default SignIn;
+export default RedirectToLogin;

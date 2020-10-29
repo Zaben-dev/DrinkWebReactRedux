@@ -1,9 +1,9 @@
 import React from 'react';
-import {VisibilityFilters, setVisibilityFilter} from '../redux/actions';
+import {VisibilityFilters, setVisibilityFilter} from '../../redux/actions';
 import {useDispatch, useSelector} from 'react-redux';
-import styles from '../styles/searchPage.module.css';
+import styles from '../../styles/searchPage.module.css';
 
-function SelectFilter(){
+function SelectResultsFilter(){
   const dispatch = useDispatch();
   const filter = useSelector(state => state.visibilityFilter);
 
@@ -22,4 +22,4 @@ function SelectFilter(){
   );
 }
 
-export default SelectFilter;
+export default SelectResultsFilter;

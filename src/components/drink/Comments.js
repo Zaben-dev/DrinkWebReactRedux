@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import DeleteComment from './DeleteComment';
-import SelectOrder from './SelectOrder';
-import firebase from '../firebase';
+import SelectCommentsOrder from './SelectCommentsOrder';
+import firebase from '../../firebase';
 import 'firebase/firestore';
 import {useSelector, useDispatch} from 'react-redux';
-import {addComment, refreshComments, commentsOrderTypes} from '../redux/actions';
-import styles from '../styles/comments.module.css'
+import {addComment, refreshComments, commentsOrderTypes} from '../../redux/actions';
+import styles from '../../styles/comments.module.css'
 
 
 function Comments(){
@@ -49,7 +49,7 @@ function Comments(){
 
   return(
     <>
-      {comments.length !== 0 && <SelectOrder/>}
+      {comments.length !== 0 && <SelectCommentsOrder/>}
       {comments.sort(SortByDateAndTime).map((comment, index) => (
         <div className={styles.commentContainer} key={index}>
           <div className={styles.authorAndTime}> {comment.name} &nbsp;&nbsp; {new Date(comment.createdAt.toDate()).toLocaleString('en-GB', {year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })} </div>

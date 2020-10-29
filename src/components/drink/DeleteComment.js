@@ -1,10 +1,10 @@
 import React, {useState}  from 'react';
-import firebase from '../firebase';
+import firebase from '../../firebase';
 import 'firebase/firestore';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import {useHistory} from "react-router-dom";
 import Modal from 'react-modal';
-import styles from '../styles/comments.module.css'
+import styles from '../../styles/comments.module.css'
 
 function DeleteComment(props){
   let db = firebase.firestore();

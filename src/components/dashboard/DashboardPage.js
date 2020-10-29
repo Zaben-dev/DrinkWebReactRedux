@@ -1,10 +1,10 @@
 import React from 'react';
-import TopBar from './TopBar';
+import TopBar from '../topbar/TopBar';
 import RandomDrinksBoard from './RandomDrinksBoard';
-import SearchBar from './SearchBar';
-import ChooseCharacterToBrowseBy from './ChooseCharacterToBrowseBy';
+import SearchBar from '../common/SearchBar';
+import ChooseCharacterToBrowseBy from '../common/ChooseCharacterToBrowseBy';
 
-function Dashboard(){
+function DashboardPage(){
 
   return(
     <>
@@ -16,4 +16,4 @@ function Dashboard(){
   )
 }
 
-export default Dashboard;
+export default DashboardPage;

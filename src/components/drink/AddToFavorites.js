@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {AiOutlineStar, AiFillStar} from 'react-icons/ai';
-import styles from '../styles/drinkPage.module.css';
+import styles from '../../styles/drinkPage.module.css';
 import {useParams, useHistory} from "react-router-dom";
 import {useSelector} from 'react-redux';
-import firebase from '../firebase';
+import firebase from '../../firebase';
 import 'firebase/firestore';
 
 function AddToFavorites(){

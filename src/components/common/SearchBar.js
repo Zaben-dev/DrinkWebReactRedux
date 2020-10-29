@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../styles/searchBar.module.css';
+import styles from '../../styles/searchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 function SearchBar(props){

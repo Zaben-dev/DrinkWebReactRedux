@@ -1,6 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../styles/topBar.module.css';
+import styles from '../../styles/topBar.module.css';
 import {useSelector} from 'react-redux';
 
 function UserProfileButton(){

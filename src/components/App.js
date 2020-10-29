@@ -1,16 +1,16 @@
 import React, {useEffect}  from 'react';
-import AuthenticationPage from './AuthenticationPage';
-import Dashboard from './Dashboard';
-import DrinkPage from './DrinkPage';
-import SearchPage from './SearchPage';
-import UserProfilePage from './UserProfilePage';
-import ErrorPage from './ErrorPage';
-import BrowseByFirstCharacterPage from './BrowseByFirstCharacterPage';
+import LoginPage from './logIn/LogInPage';
+import DashboardPage from './dashboard/DashboardPage';
+import DrinkPage from './drink/DrinkPage';
+import SearchPage from './search/SearchPage';
+import UserProfilePage from './profile/UserProfilePage';
+import ErrorPage from './common/ErrorPage';
+import BrowseByFirstCharacterPage from './browseByFirstCharacter/BrowseByFirstCharacterPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import {setUserInfo} from '../redux/actions'
 import firebase from '../firebase';
 import {useDispatch} from 'react-redux';
-import Footer from './Footer';
+import Footer from './footer/Footer';
 import '../styles/index.css'
 
 function App() {
@@ -33,10 +33,10 @@ function App() {
            <Redirect to='/login'/>
           </Route>
          <Route path = "/dashboard">
-           <Dashboard/>
+           <DashboardPage/>
          </Route>
          <Route path = "/login">
-            <AuthenticationPage/>
+            <LoginPage/>
          </Route>
          <Route path = "/drink/:drinkId">
            <DrinkPage/>
