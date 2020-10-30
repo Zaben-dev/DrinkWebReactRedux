@@ -1,9 +1,9 @@
 import React from 'react';
-import SignOut from './LogOut';
-import SignIn from './RedirectToLogin';
-import HomePageIcon from './HomePageIcon';
-import UserProfileButton from './UserProfileButton';
-import styles from '../../styles/topBar.module.css';
+import SignOut from 'components/topbar/LogOut';
+import SignIn from 'components/topbar/RedirectToLogin';
+import HomePageIcon from 'components/topbar/HomePageIcon';
+import UserProfileButton from 'components/topbar/UserProfileButton';
+import styles from 'styles/topBar.module.css';
 import {useSelector} from 'react-redux';
 
 function TopBar(){

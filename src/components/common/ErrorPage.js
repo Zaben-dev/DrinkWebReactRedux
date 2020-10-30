@@ -1,6 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../../styles/errorPage.module.css'
+import styles from 'styles/errorPage.module.css'
 import { BiErrorCircle } from 'react-icons/bi';
 
 function ErrorPage(){

@@ -1,12 +1,12 @@
 import React , {useEffect, useCallback}  from 'react';
-import SelectResultsFilter from './SelectResultsFilter';
-import TopBar from '../topbar/TopBar';
-import SearchBar from '../common/SearchBar';
-import DrinkMiniature from '../common/DrinkMiniature';
+import SelectResultsFilter from 'components/search/SelectResultsFilter';
+import TopBar from 'components/topbar/TopBar';
+import SearchBar from 'components/common/SearchBar';
+import DrinkMiniature from 'components/common/DrinkMiniature';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
-import {addSearchResults, VisibilityFilters} from '../../redux/actions';
-import styles from '../../styles/searchPage.module.css';
+import {addSearchResults, VisibilityFilters} from 'redux/actions';
+import styles from 'styles/searchPage.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 function SearchPage(){

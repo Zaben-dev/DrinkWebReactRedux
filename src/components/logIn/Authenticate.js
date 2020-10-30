@@ -1,6 +1,6 @@
 import React from 'react';
-import firebase from '../../firebase';
-import styles from'../../styles/LogInPage.module.css';
+import firebase from 'firebase.js';
+import styles from'styles/LogInPage.module.css';
 
 function Authenticate(props){
   

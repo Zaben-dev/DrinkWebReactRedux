@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import DeleteComment from './DeleteComment';
-import SelectCommentsOrder from './SelectCommentsOrder';
-import firebase from '../../firebase';
+import DeleteComment from 'components/drink/DeleteComment';
+import SelectCommentsOrder from 'components/drink/SelectCommentsOrder';
+import firebase from 'firebase.js';
 import 'firebase/firestore';
 import {useSelector, useDispatch} from 'react-redux';
-import {addComment, refreshComments, commentsOrderTypes} from '../../redux/actions';
-import styles from '../../styles/comments.module.css'
+import {addComment, refreshComments, commentsOrderTypes} from 'redux/actions';
+import styles from 'styles/comments.module.css'
 
 
 function Comments(){

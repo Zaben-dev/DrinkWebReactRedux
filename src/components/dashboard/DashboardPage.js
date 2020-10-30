@@ -1,8 +1,8 @@
 import React from 'react';
-import TopBar from '../topbar/TopBar';
-import RandomDrinksBoard from './RandomDrinksBoard';
-import SearchBar from '../common/SearchBar';
-import ChooseCharacterToBrowseBy from '../common/ChooseCharacterToBrowseBy';
+import TopBar from 'components/topbar/TopBar';
+import RandomDrinksBoard from 'components/dashboard/RandomDrinksBoard';
+import SearchBar from 'components/common/SearchBar';
+import ChooseCharacterToBrowseBy from 'components/common/ChooseCharacterToBrowseBy';
 
 function DashboardPage(){
 

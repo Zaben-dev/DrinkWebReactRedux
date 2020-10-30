@@ -1,12 +1,12 @@
 import React, {useEffect, useCallback, useState}  from 'react';
 import {useParams} from "react-router-dom";
-import TopBar from '../topbar/TopBar';
-import AddComment from './AddComment';
-import Comments from './Comments';
-import DrinkIngredients from './DrinkIngredients';
-import AddToFavorites from './AddToFavorites';
+import TopBar from 'components/topbar/TopBar';
+import AddComment from 'components/drink/AddComment';
+import Comments from 'components/drink/Comments';
+import DrinkIngredients from 'components/drink/DrinkIngredients';
+import AddToFavorites from 'components/drink/AddToFavorites';
 import {useSelector} from 'react-redux';
-import styles from '../../styles/drinkPage.module.css'
+import styles from 'styles/drinkPage.module.css'
 
 function DrinkPage(){
   let {drinkId} = useParams();

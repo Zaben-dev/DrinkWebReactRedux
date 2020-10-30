@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../../styles/randomDrinksBoard.module.css';
+import styles from 'styles/randomDrinksBoard.module.css';
 import {useDispatch} from 'react-redux';
-import {refreshDrinksInBoard} from '../../redux/actions'
+import {refreshDrinksInBoard} from 'redux/actions'
 import { HiOutlineRefresh } from 'react-icons/hi';
 
 function RefreshDrinksInBoard(){

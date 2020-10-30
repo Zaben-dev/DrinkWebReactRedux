@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import TopBar from '../topbar/TopBar';
-import DrinkMiniature from '../common/DrinkMiniature';
+import TopBar from 'components/topbar/TopBar';
+import DrinkMiniature from 'components/common/DrinkMiniature';
 import {useSelector} from 'react-redux';
-import styles from '../../styles/userProfilePage.module.css';
-import firebase from '../../firebase';
+import styles from 'styles/userProfilePage.module.css';
+import firebase from 'firebase.js';
 import 'firebase/firestore';
 
 function UserProfilePage(){

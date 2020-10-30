@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGlassMartiniAlt } from 'react-icons/fa';
 import {useHistory} from 'react-router-dom';
-import styles from '../../styles/topBar.module.css';
+import styles from 'styles/topBar.module.css';
 
 function HomePageIcon(){
   let history = useHistory();

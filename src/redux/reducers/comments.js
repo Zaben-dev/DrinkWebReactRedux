@@ -1,4 +1,4 @@
-import {ADD_COMMENT, REFRESH_COMMENTS} from '../actionTypes';
+import {ADD_COMMENT, REFRESH_COMMENTS} from 'redux/actionTypes';
 
 const initialState=[]
 

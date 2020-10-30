@@ -1,10 +1,10 @@
 import React from 'react';
-import firebase from '../../firebase';
+import firebase from 'firebase.js';
 import 'firebase/auth';
 import {useHistory} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import {clearUserInfo} from '../../redux/actions';
-import styles from '../../styles/topBar.module.css';
+import {clearUserInfo} from 'redux/actions';
+import styles from 'styles/topBar.module.css';
 
 function LogOut(){
   const dispatch = useDispatch()

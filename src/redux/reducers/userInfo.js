@@ -1,4 +1,4 @@
-import {SET_USER_INFO, CLEAR_USER_INFO} from "../actionTypes"
+import {SET_USER_INFO, CLEAR_USER_INFO} from "redux/actionTypes"
 
 const initialState = {
   userInfo: {}

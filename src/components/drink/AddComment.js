@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
 import {useParams} from "react-router-dom";
-import styles from '../../styles/addComment.module.css';
-import firebase from '../../firebase';
+import styles from 'styles/addComment.module.css';
+import firebase from 'firebase.js';
 import {useSelector} from 'react-redux';
 import 'firebase/firestore';
 

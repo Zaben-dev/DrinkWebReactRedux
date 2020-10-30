@@ -1,9 +1,9 @@
 import React, {useEffect, useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {addDrinkToBoard} from '../../redux/actions';
-import DrinkMiniature from '../common/DrinkMiniature';
-import RefreshRandomDrinks from './RefreshRandomDrinks';
-import styles from '../../styles/randomDrinksBoard.module.css';
+import {addDrinkToBoard} from 'redux/actions';
+import DrinkMiniature from 'components/common/DrinkMiniature';
+import RefreshRandomDrinks from 'components/dashboard/RefreshRandomDrinks';
+import styles from 'styles/randomDrinksBoard.module.css';
 
 function RandomDrinksBoard(){
   const dispatch = useDispatch();

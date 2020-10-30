@@ -1,4 +1,4 @@
-import {ADD_SEARCH_RESULTS} from '../actionTypes';
+import {ADD_SEARCH_RESULTS} from 'redux/actionTypes';
 
 const initialState={
   results: {}

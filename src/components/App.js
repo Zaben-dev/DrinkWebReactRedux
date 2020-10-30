@@ -1,17 +1,17 @@
 import React, {useEffect}  from 'react';
-import LoginPage from './logIn/LogInPage';
-import DashboardPage from './dashboard/DashboardPage';
-import DrinkPage from './drink/DrinkPage';
-import SearchPage from './search/SearchPage';
-import UserProfilePage from './profile/UserProfilePage';
-import ErrorPage from './common/ErrorPage';
-import BrowseByFirstCharacterPage from './browseByFirstCharacter/BrowseByFirstCharacterPage';
+import LoginPage from 'components/logIn/LogInPage';
+import DashboardPage from 'components/dashboard/DashboardPage';
+import DrinkPage from 'components/drink/DrinkPage';
+import SearchPage from 'components/search/SearchPage';
+import UserProfilePage from 'components/profile/UserProfilePage';
+import ErrorPage from 'components/common/ErrorPage';
+import BrowseByFirstCharacterPage from 'components/browseByFirstCharacter/BrowseByFirstCharacterPage';
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
-import {setUserInfo} from '../redux/actions'
-import firebase from '../firebase';
+import {setUserInfo} from 'redux/actions'
+import firebase from 'firebase.js';
 import {useDispatch} from 'react-redux';
-import Footer from './footer/Footer';
-import '../styles/index.css'
+import Footer from 'components/footer/Footer';
+import 'styles/index.css'
 
 function App() {
   const dispatch = useDispatch()
