@@ -7,7 +7,7 @@ import firebase from 'firebase.js';
 import 'firebase/firestore';
 
 function UserProfilePage(){
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
   let db = firebase.firestore();
   const [favorites, setFavorites] = useState([]);
   const [isFavoritesEmpty, setIsFavoritesEmpty] = useState(false);

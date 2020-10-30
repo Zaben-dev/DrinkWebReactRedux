@@ -1,6 +1,6 @@
 import { ADD_COMMENT, REFRESH_COMMENTS } from 'redux/actionTypes';
 
-const initialState=[]
+const initialState = [];
 
 function comments(state = initialState, action){
   switch(action.type){

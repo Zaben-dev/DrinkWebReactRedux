@@ -11,7 +11,7 @@ import styles from 'styles/drinkPage.module.css'
 function DrinkPage(){
   let {drinkId} = useParams();
   const [drink, setDrink] = useState(null);
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
 
   const fetchDrink = useCallback( async () => {
     let data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`);

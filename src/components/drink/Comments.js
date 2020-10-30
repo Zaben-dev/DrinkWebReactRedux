@@ -14,7 +14,7 @@ function Comments(){
   let {drinkId} = useParams();
   const dispatch = useDispatch();
   const comments = useSelector(state => state.comments);
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
   const commentsOrder = useSelector(state => state.commentsOrder);
 
   useEffect(() => {

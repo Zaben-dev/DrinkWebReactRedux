@@ -1,6 +1,6 @@
 import { ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD } from "redux/actionTypes"
 
-const initialState=[]
+const initialState = [];
 
 function randomDrinksInBoard(state = initialState, action){
   switch(action.type){

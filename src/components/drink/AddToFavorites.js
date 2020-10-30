@@ -8,7 +8,7 @@ import 'firebase/firestore';
 
 function AddToFavorites(){
   const [isFavorite, setIsFavorite] = useState(false);
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
   let {drinkId} = useParams();
   let db = firebase.firestore();
   let history = useHistory();

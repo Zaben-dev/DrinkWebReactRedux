@@ -9,7 +9,7 @@ function AddComment(){
   const [input, setInput] = useState('');
   const [isExpanded, setIsExpanded] = useState(false);
   const [resultMessage, setResultMessage] = useState('');
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
   let {drinkId} = useParams();
   let db = firebase.firestore();
 

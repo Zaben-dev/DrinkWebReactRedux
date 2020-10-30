@@ -7,7 +7,7 @@ import styles from 'styles/topBar.module.css';
 import { useSelector } from 'react-redux';
 
 function TopBar(){
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
 
   return(
     (Object.keys(user).length === 0 && user.constructor === Object) ? (

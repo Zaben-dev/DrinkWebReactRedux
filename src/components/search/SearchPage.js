@@ -12,7 +12,7 @@ import { FaSearch } from 'react-icons/fa';
 function SearchPage(){
   let {string} = useParams();
   const dispatch = useDispatch();
-  const results = useSelector(state => state.searchResults.results);
+  const results = useSelector(state => state.searchResults);
   const filter = useSelector(state => state.visibilityFilter);
 
   const fetchResults = useCallback( async () => {

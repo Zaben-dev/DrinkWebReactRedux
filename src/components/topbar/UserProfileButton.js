@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 function UserProfileButton(){
   let history = useHistory();
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user);
 
   function handleClick(){
     history.push('/userProfile');
