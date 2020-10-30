@@ -1,13 +1,13 @@
-import {ADD_SEARCH_RESULTS, SET_USER_INFO, CLEAR_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER, ADD_COMMENT, REFRESH_COMMENTS, SET_COMMENTS_ORDER} from "redux/actionTypes";
+import { ADD_SEARCH_RESULTS, SET_USER_INFO, CLEAR_USER_INFO, ADD_DRINK_TO_BOARD, REFRESH_DRINKS_IN_BOARD, SET_VISIBILITY_FILTER, ADD_COMMENT, REFRESH_COMMENTS, SET_COMMENTS_ORDER } from "redux/actionTypes";
 
-export function setUserInfo(userInfo){
+export function setUser(user){
   return{
     type: SET_USER_INFO,
-    userInfo
+    user
   }
 }
 
-export function clearUserInfo(){
+export function clearUser(){
   return{
     type: CLEAR_USER_INFO
   }
@@ -20,7 +20,7 @@ export function addDrinkToBoard(drink){
   }
 }
 
-export function refreshDrinksInBoard(drink){
+export function refreshDrinksInBoard(){
   return{
     type: REFRESH_DRINKS_IN_BOARD,
   }
@@ -67,8 +67,8 @@ export function setCommentsOrder(order){
 }
 
 export const commentsOrderTypes = {
-    NEWEST_TO_OLDEST: 'NEWEST_TO_OLDEST',
-    OLDEST_TO_NEWEST: 'OLDEST_TO_NEWEST'
+  NEWEST_TO_OLDEST: 'NEWEST_TO_OLDEST',
+  OLDEST_TO_NEWEST: 'OLDEST_TO_NEWEST'
 }
 
 

@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import TopBar from 'components/topbar/TopBar';
 import DrinkMiniature from 'components/common/DrinkMiniature';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import styles from 'styles/userProfilePage.module.css';
 import firebase from 'firebase.js';
 import 'firebase/firestore';
 
 function UserProfilePage(){
-  const userInfo = useSelector(state => state.userInfo.userInfo);
+  const user = useSelector(state => state.user.user);
   let db = firebase.firestore();
   const [favorites, setFavorites] = useState([]);
   const [isFavoritesEmpty, setIsFavoritesEmpty] = useState(false);
@@ -19,8 +19,8 @@ function UserProfilePage(){
   }
 
   useEffect(() => {
-    if(Object.keys(userInfo).length !== 0){
-      db.collection("users").doc(userInfo.uid).collection("favorites").get()
+    if(Object.keys(user).length !== 0){
+      db.collection("users").doc(user.uid).collection("favorites").get()
       .then(function(querySnapshot) {
         if(querySnapshot.empty){
           setIsFavoritesEmpty(true);
@@ -30,15 +30,15 @@ function UserProfilePage(){
         });
       })
     }
-  },[userInfo, db])
+  },[user, db])
 
   return(
     <>
       <TopBar/>
-      {Object.keys(userInfo).length !== 0 &&
+      {Object.keys(user).length !== 0 &&
         <>
-          <img className={styles.profileImage} src={userInfo.photoURL} alt="avatar"/>
-          <div className={styles.displayName}>{userInfo.displayName}</div>
+          <img className={styles.profileImage} src={user.photoURL} alt="avatar"/>
+          <div className={styles.displayName}>{user.displayName}</div>
           <div className={styles.myFavoritesText}>My favorites:</div>
           <div className={styles.drinksContainer}>
             {favorites.map((drink, index) => <DrinkMiniature drink={drink} key={index}/>)}
@@ -47,7 +47,7 @@ function UserProfilePage(){
         </>
       }
     </>
-  )
+  );
 }
 
 export default UserProfilePage;

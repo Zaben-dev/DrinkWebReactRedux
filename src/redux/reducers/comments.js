@@ -1,18 +1,15 @@
-import {ADD_COMMENT, REFRESH_COMMENTS} from 'redux/actionTypes';
+import { ADD_COMMENT, REFRESH_COMMENTS } from 'redux/actionTypes';
 
 const initialState=[]
 
 function comments(state = initialState, action){
   switch(action.type){
-    case ADD_COMMENT:{
-      return  [...state, action.comment]
-    }
-    case REFRESH_COMMENTS:{
+    case ADD_COMMENT:
+      return  [...state, action.comment];
+    case REFRESH_COMMENTS:
       return initialState;
-    }
-    default:{
+    default:
       return state;
-    }
   }
 }
 

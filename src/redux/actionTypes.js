@@ -1,4 +1,4 @@
-export const  SET_USER_INFO = 'SET_USER_INFO';
+export const SET_USER_INFO = 'SET_USER_INFO';
 export const CLEAR_USER_INFO = 'CLEAR_USER_INFO';
 export const ADD_DRINK_TO_BOARD = 'ADD_DRINK';
 export const REFRESH_DRINKS_IN_BOARD = 'REFRESH_DRINKS_IN_BOARD';

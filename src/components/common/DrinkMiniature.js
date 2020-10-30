@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from 'styles/drinkMiniature.module.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function DrinkMiniature(props){
   return(
@@ -10,7 +10,7 @@ function DrinkMiniature(props){
         {props.drink.strDrink}
       </div>
     </Link>
-  )
+  );
 }
 
 export default DrinkMiniature;

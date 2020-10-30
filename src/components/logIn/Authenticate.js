@@ -12,7 +12,7 @@ function Authenticate(props){
     <div>
       <button className={styles.signInButton} onClick={handleClick}>{props.providerName}&nbsp;&nbsp;&nbsp;<span>{props.icon}</span></button>
     </div>
-    )
+  );
 }
 
-export default Authenticate
+export default Authenticate;

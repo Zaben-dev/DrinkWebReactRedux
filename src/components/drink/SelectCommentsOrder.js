@@ -1,6 +1,6 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {setCommentsOrder, commentsOrderTypes} from 'redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCommentsOrder, commentsOrderTypes } from 'redux/actions';
 import styles from 'styles/comments.module.css';
 
 function SelectCommentsOrder(){

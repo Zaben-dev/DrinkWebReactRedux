@@ -1,15 +1,15 @@
-import React, {useState}  from 'react';
-import {useParams} from "react-router-dom";
+import React, { useState }  from 'react';
+import { useParams } from "react-router-dom";
 import styles from 'styles/addComment.module.css';
 import firebase from 'firebase.js';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import 'firebase/firestore';
 
 function AddComment(){
   const [input, setInput] = useState('');
   const [isExpanded, setIsExpanded] = useState(false);
   const [resultMessage, setResultMessage] = useState('');
-  const userInfo = useSelector(state => state.userInfo.userInfo);
+  const user = useSelector(state => state.user.user);
   let {drinkId} = useParams();
   let db = firebase.firestore();
 
@@ -25,17 +25,17 @@ function AddComment(){
   function handleSubmit(){
     db.collection('comments').doc().set({
       drinkId: drinkId,
-      uid: userInfo.uid,
+      uid: user.uid,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      name: userInfo.displayName,
+      name: user.displayName,
       content: input
     })
-    .then(function() {
+    .then(() => {
         setInput('');
         setIsExpanded(false);
         setResultMessage('Comment added successfully!');
     })
-    .catch(function(error) {
+    .catch(() => {
         setResultMessage('Something went wrong. Check if your comment has beetween 3 and 2000 characters.');
     });
   }
@@ -46,7 +46,7 @@ function AddComment(){
     }  
   }
 
-  if (isExpanded === false){
+  if(isExpanded === false){
     return(
       <>
         <div className={styles.addCommentContainer}>
@@ -59,12 +59,12 @@ function AddComment(){
           } 
         </div>
       </>  
-    )
+    );
   }
   else{
     return(
       <div className={styles.addCommentContainer}>
-        <div className={styles.displayName}>{userInfo.displayName}:</div>
+        <div className={styles.displayName}>{user.displayName}:</div>
         <textarea className={styles.textarea} onKeyPress={handleKeypress} value={input} onChange={handleChange} placeholder="comment..."/>
         <button className={styles.addCommentButton} onClick={handleSubmit}>add comment</button>
         {resultMessage !=='' &&
@@ -73,7 +73,7 @@ function AddComment(){
           </div>
         } 
       </div>
-    )
+    );
   }
 }
 

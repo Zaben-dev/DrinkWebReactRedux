@@ -1,6 +1,6 @@
 import React from 'react';
-import {VisibilityFilters, setVisibilityFilter} from 'redux/actions';
-import {useDispatch, useSelector} from 'react-redux';
+import { VisibilityFilters, setVisibilityFilter } from 'redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from 'styles/searchPage.module.css';
 
 function SelectResultsFilter(){

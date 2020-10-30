@@ -44,7 +44,7 @@ function DrinkIngredients(props){
         <ul>{zipIngredientsAndMeasures(returnIngredientsAsArray(), returnMeasuresAsArray()).map((x, index)=> <li className={styles.ElementOfIngredients} key={index}>{x}</li>)}</ul>}
       </div>
     </>
-  )
+  );
 }
 
 export default DrinkIngredients;

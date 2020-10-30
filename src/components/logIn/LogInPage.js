@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Authenticate from 'components/logIn/Authenticate';
 import firebase from 'firebase.js';
-import {useHistory, Link} from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import styles from 'styles/LogInPage.module.css';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 
@@ -30,7 +30,7 @@ function LogInPage(){
       <br/>
       <Link className={styles.link} to="/dashboard">enter without account</Link>
     </div>
-  )
+  );
 }
 
 export default LogInPage;

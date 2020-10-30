@@ -1,11 +1,11 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import styles from 'styles/topBar.module.css';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function UserProfileButton(){
   let history = useHistory();
-  const userInfo = useSelector(state => state.userInfo.userInfo);
+  const user = useSelector(state => state.user.user);
 
   function handleClick(){
     history.push('/userProfile');
@@ -13,10 +13,10 @@ function UserProfileButton(){
 
   return(
     <button className={styles.userProfileButton} onClick={handleClick}>
-      <img className={styles.profileImage} src={userInfo.photoURL} alt="avatar"/>
-      <div className={styles.displayName}> {userInfo && userInfo.displayName} </div>
+      <img className={styles.profileImage} src={user.photoURL} alt="avatar"/>
+      <div className={styles.displayName}> {user && user.displayName} </div>
     </button>
-  )
+  );
 }
 
 export default UserProfileButton;

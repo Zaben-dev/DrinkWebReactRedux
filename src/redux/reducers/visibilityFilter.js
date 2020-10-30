@@ -1,7 +1,9 @@
 import { VisibilityFilters } from 'redux/actions';
 import { SET_VISIBILITY_FILTER } from 'redux/actionTypes';
 
-function visibilityFilter(state = VisibilityFilters.SHOW_ALL, action){
+const initialState = VisibilityFilters.SHOW_ALL;
+
+function visibilityFilter(state = initialState, action){
   switch(action.type){
     case SET_VISIBILITY_FILTER:
       return action.filter;

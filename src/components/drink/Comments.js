@@ -1,25 +1,25 @@
-import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import DeleteComment from 'components/drink/DeleteComment';
 import SelectCommentsOrder from 'components/drink/SelectCommentsOrder';
 import firebase from 'firebase.js';
 import 'firebase/firestore';
-import {useSelector, useDispatch} from 'react-redux';
-import {addComment, refreshComments, commentsOrderTypes} from 'redux/actions';
+import { useSelector, useDispatch } from 'react-redux';
+import { addComment, refreshComments, commentsOrderTypes } from 'redux/actions';
 import styles from 'styles/comments.module.css'
 
 
 function Comments(){
   let db = firebase.firestore();
   let {drinkId} = useParams();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const comments = useSelector(state => state.comments);
-  const userInfo = useSelector(state => state.userInfo.userInfo);
+  const user = useSelector(state => state.user.user);
   const commentsOrder = useSelector(state => state.commentsOrder);
 
   useEffect(() => {
     const unsubscribe = db.collection('comments').where('drinkId', '==', drinkId)
-    .onSnapshot(function (doc){
+    .onSnapshot((doc) => {
       dispatch(refreshComments());
       doc.forEach((comment) => {
         if(doc.metadata.hasPendingWrites === false) 
@@ -53,13 +53,13 @@ function Comments(){
       {comments.sort(SortByDateAndTime).map((comment, index) => (
         <div className={styles.commentContainer} key={index}>
           <div className={styles.authorAndTime}> {comment.name} &nbsp;&nbsp; {new Date(comment.createdAt.toDate()).toLocaleString('en-GB', {year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })} </div>
-          {userInfo.uid===comment.uid && <div><DeleteComment commentId={comment.commentId}/></div>}
+          {user.uid===comment.uid && <div><DeleteComment commentId={comment.commentId}/></div>}
           <div className={styles.break}></div>
           <div className={styles.content}>{comment.content}</div>
         </div>
       ))}
     </>
-  )
+  );
 }
 
 export default Comments;

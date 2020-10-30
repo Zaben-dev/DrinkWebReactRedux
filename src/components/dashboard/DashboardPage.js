@@ -13,7 +13,7 @@ function DashboardPage(){
       <RandomDrinksBoard/>
       <ChooseCharacterToBrowseBy/>
     </>
-  )
+  );
 }
 
 export default DashboardPage;
