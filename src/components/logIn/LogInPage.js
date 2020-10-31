@@ -28,7 +28,7 @@ function LogInPage(){
          or
       </div>
       <br/>
-      <Link className={styles.link} to="/dashboard">enter without account</Link>
+      <Link className={styles.enterWithoutAccount} to="/dashboard">enter without account</Link>
     </div>
   );
 }

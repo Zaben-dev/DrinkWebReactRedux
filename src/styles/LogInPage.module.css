@@ -31,9 +31,9 @@
     font-size: 15px;
   }
 
-  .link{
-    font-size: 16px;
-    color: rgb(44, 108, 122);
+  .enterWithoutAccount{
+    font-size: 17px;
+    color: rgb(37, 96, 109);
   }
 
   a:hover {
@@ -75,9 +75,9 @@
     font-size: 15px;
   }
 
-  .link{
-    font-size: 16px;
-    color: rgb(44, 108, 122);
+  .enterWithoutAccount{
+    font-size: 17px;
+    color: rgb(37, 96, 109);
   }
 
   a:hover {

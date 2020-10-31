@@ -36,7 +36,7 @@ function DrinkPage(){
             <div className={styles.glass}>glass: {drink.strGlass}</div>
             <div><DrinkIngredients drink={drink}/></div>
             <div className={styles.instructions}>{drink.strInstructions}</div>
-            {Object.keys(user).length !== 0 ? <AddComment/> : <div className={styles.signInInfo}>Sign in to add comments</div>}
+            {Object.keys(user).length !== 0 ? <AddComment/> : <div className={styles.signInInfo}>Log in to add comments</div>}
           </div>
           <Comments/>
         </>
