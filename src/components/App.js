@@ -27,7 +27,7 @@ function App() {
   
   return (
     <>
-      <Router basename={'drinkWeb'}>
+      <Router basename="/DrinkWebReactRedux">
          <Switch>
           <Route exact path = "/">
            <Redirect to='/login'/>
@@ -50,9 +50,6 @@ function App() {
          <Route path = "/userProfile">
            <UserProfilePage/>
          </Route>
-         <Route exact path = "/DrinkWebReactRedux/">
-           <Redirect to='/login'/>
-          </Route>
          <Route path = "*">
            <ErrorPage/>
          </Route>
