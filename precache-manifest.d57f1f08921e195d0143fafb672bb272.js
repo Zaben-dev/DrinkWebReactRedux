@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a036c15dd35fd8d92cdc63a0fe7d328f",
+    "revision": "ae7252561894771699a5a2024ca2a033",
     "url": "/DrinkWebReactRedux/index.html"
   },
   {
-    "revision": "092029e41da971a99b6c",
+    "revision": "f696f89b10d6f29dd41d",
     "url": "/DrinkWebReactRedux/static/css/main.0bfc1e04.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DrinkWebReactRedux/static/js/2.c4a01364.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "092029e41da971a99b6c",
-    "url": "/DrinkWebReactRedux/static/js/main.3a777bdc.chunk.js"
+    "revision": "f696f89b10d6f29dd41d",
+    "url": "/DrinkWebReactRedux/static/js/main.1cd6d565.chunk.js"
   },
   {
     "revision": "73412c18c2166be34504",
