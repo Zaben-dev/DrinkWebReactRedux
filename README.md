@@ -10,5 +10,5 @@ In this SPA you can look up for over 600 drink recipes. Logged users are able to
 - React router
 - React modal
 - React icons
-- Css modules
+- CSS modules
 - Drinks database provided by https://www.thecocktaildb.com/
